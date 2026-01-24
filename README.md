@@ -2,7 +2,7 @@
 
 Website for the Montessori-Kinderhaus Potsdam West, a parent-run Montessori kindergarten in Potsdam, Germany.
 
-**Live site:** https://maciejgryka.github.io/kinderhaus/
+**Live site:** (Cloudflare Pages - URL TBD)
 
 ## Tech Stack
 
@@ -36,14 +36,23 @@ bun run preview  # Preview the build locally
 
 ## Deployment
 
-The site is automatically deployed to GitHub Pages on every push to `main`.
+The site is deployed to **Cloudflare Pages** via Workers Builds.
 
-- **Workflow:** `.github/workflows/deploy.yml`
-- **URL:** https://maciejgryka.github.io/kinderhaus/
+### Cloudflare Pages (current)
 
-To enable deployment, go to the repo's Settings > Pages and set the source to "GitHub Actions".
+Automatic deployment on every push to `main`.
 
-Note: The `base: '/kinderhaus'` setting in `astro.config.mjs` is required for GitHub Pages project sites. Remove it if using a custom domain.
+- **Config:** `wrangler.jsonc` defines the static assets directory
+- **Build command:** `bun run build`
+- **Output directory:** `dist`
+
+### GitHub Pages (alternative)
+
+A GitHub Actions workflow is also available at `.github/workflows/deploy.yml`.
+
+To use GitHub Pages instead:
+1. Add `base: '/kinderhaus'` to `astro.config.mjs`
+2. Enable GitHub Pages in repo Settings > Pages > Source: "GitHub Actions"
 
 ## Project Structure
 
