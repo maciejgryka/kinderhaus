@@ -1,0 +1,52 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-cream-dark py-12 px-4 md:px-8 mt-16">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <h3 class="font-serif font-semibold text-lg mb-4">Kontakt</h3>
+        <address class="not-italic text-text-muted text-sm leading-relaxed">
+          Montessori-Kinderhaus Potsdam West<br />
+          Knobelsdorffstr. 7<br />
+          14471 Potsdam<br /><br />
+          <a href="tel:+493316204430" class="hover:text-yellow-dark transition-colors">
+            0331 – 620 44 30
+          </a><br />
+          <a href="mailto:info@montessori-kinderhaus-potsdam.de" class="hover:text-yellow-dark transition-colors">
+            info@montessori-kinderhaus-potsdam.de
+          </a>
+        </address>
+      </div>
+
+      <div>
+        <h3 class="font-serif font-semibold text-lg mb-4">Öffnungszeiten</h3>
+        <p class="text-text-muted text-sm leading-relaxed">
+          Mo – Do: 7:30 – 16:30 Uhr<br />
+          Fr: 7:30 – 15:00 Uhr
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-serif font-semibold text-lg mb-4">Rechtliches</h3>
+        <ul class="text-text-muted text-sm space-y-2">
+          <li>
+            <a href="/impressum" class="hover:text-yellow-dark transition-colors">
+              Impressum
+            </a>
+          </li>
+          <li>
+            <a href="/datenschutz" class="hover:text-yellow-dark transition-colors">
+              Datenschutz
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-yellow/30 pt-8 text-center text-text-muted text-sm">
+      <p>&copy; {currentYear} Montessori-Kinderhaus Potsdam e.V.</p>
+    </div>
+  </div>
+</footer>

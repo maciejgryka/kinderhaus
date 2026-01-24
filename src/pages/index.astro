@@ -1,17 +1,22 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
-    </head>
-    <body>
-        <h1>Astro</h1>
-    </body>
-</html>
+<Layout title="Startseite">
+  <section class="py-16 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="font-serif text-4xl md:text-5xl font-semibold mb-4">
+        Montessori-Kinderhaus<br />Potsdam West
+      </h1>
+      <p class="text-text-muted text-lg mb-8">
+        Elterninitiative im Potsdamer Westen
+      </p>
+      <a
+        href="/ueber-uns"
+        class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+      >
+        Mehr über unser Kinderhaus
+      </a>
+    </div>
+  </section>
+</Layout>

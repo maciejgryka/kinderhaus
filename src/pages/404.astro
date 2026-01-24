@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Seite nicht gefunden">
+  <section class="py-24 px-4 md:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-6xl mb-6">🍂</p>
+      <h1 class="font-serif text-3xl md:text-4xl font-semibold mb-4">
+        Seite nicht gefunden
+      </h1>
+      <p class="text-text-muted text-lg mb-8">
+        Diese Seite existiert leider nicht. Vielleicht finden Sie hier, was Sie suchen:
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/"
+          class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+        >
+          Zur Startseite
+        </a>
+        <a
+          href="/kontakt"
+          class="inline-block border border-yellow hover:bg-yellow/20 text-text font-medium px-6 py-3 rounded-full transition-colors"
+        >
+          Kontakt
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -5,6 +5,7 @@
 Rebuild the website for Montessori-Kinderhaus Potsdam West using Astro + Tailwind CSS. The new design features a modern, warm aesthetic with organic shapes, soft colors, and clean typography.
 
 **Current site:** https://www.montessori-kinderhaus-potsdam.de/
+**Design mockup:** `image.png` (in project root)
 **Tech stack:** Astro, Tailwind CSS, hosted on GitHub Pages (or Netlify/Vercel)
 
 ---
