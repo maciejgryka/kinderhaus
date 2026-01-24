@@ -1,43 +1,53 @@
-# Astro Starter Kit: Minimal
+# Montessori-Kinderhaus Potsdam West
+
+Website for the Montessori-Kinderhaus Potsdam West, a parent-run Montessori kindergarten in Potsdam, Germany.
+
+**Live site:** (coming soon)
+
+## Tech Stack
+
+- [Astro](https://astro.build/) - Static site generator
+- [Tailwind CSS v4](https://tailwindcss.com/) - Styling
+- [Bun](https://bun.sh/) - Package manager and runtime
+
+## Getting Started
+
+### Prerequisites
+
+This project uses [mise](https://mise.jdx.dev/) to manage the Bun runtime. Install mise first, then:
 
 ```sh
-bun create astro@latest -- --template minimal
+mise install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Development
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+bun install    # Install dependencies
+bun run dev    # Start dev server at localhost:4321
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Build
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+bun run build    # Build to ./dist/
+bun run preview  # Preview the build locally
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Project Structure
 
-## 🧞 Commands
+```
+src/
+├── components/    # Reusable Astro components
+├── layouts/       # Page layouts
+├── pages/         # Routes (each .astro file becomes a page)
+└── styles/        # Global CSS with Tailwind
+public/
+└── images/        # Static assets
+```
 
-All commands are run from the root of the project, from a terminal:
+## Documentation
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `plan.md` - Content plan and site structure
+- `AGENTS.md` - Guidelines for AI agents working on this project
+- `image.png` - Design mockup reference
