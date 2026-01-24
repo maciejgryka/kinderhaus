@@ -38,9 +38,9 @@ See `plan.md` for full content mapping. Key design principles:
 ### Color Palette
 - Background: `#FDF8F3` (warm cream)
 - Primary accent: `#F5D59A` (soft yellow)
-- Secondary accent: `#E8C47C` (darker yellow)
+- Secondary accent: `#D4A84B` (darker yellow, for links)
 - Text: `#2D2D2D` (dark gray)
-- Muted text: `#6B6B6B`
+- Muted text: `#555555`
 
 ### Visual Style
 - Warm, inviting aesthetic suitable for a kindergarten
