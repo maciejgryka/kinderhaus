@@ -2,7 +2,7 @@
 
 Website for the Montessori-Kinderhaus Potsdam West, a parent-run Montessori kindergarten in Potsdam, Germany.
 
-**Live site:** (coming soon)
+**Live site:** https://maciejgryka.github.io/kinderhaus/
 
 ## Tech Stack
 
@@ -33,6 +33,17 @@ bun run dev    # Start dev server at localhost:4321
 bun run build    # Build to ./dist/
 bun run preview  # Preview the build locally
 ```
+
+## Deployment
+
+The site is automatically deployed to GitHub Pages on every push to `main`.
+
+- **Workflow:** `.github/workflows/deploy.yml`
+- **URL:** https://maciejgryka.github.io/kinderhaus/
+
+To enable deployment, go to the repo's Settings > Pages and set the source to "GitHub Actions".
+
+Note: The `base: '/kinderhaus'` setting in `astro.config.mjs` is required for GitHub Pages project sites. Remove it if using a custom domain.
 
 ## Project Structure
 

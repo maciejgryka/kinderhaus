@@ -8,7 +8,7 @@ This is a static website for **Montessori-Kinderhaus Potsdam West**, a parent-ru
 
 - **Tech stack:** Astro, Tailwind CSS v4, TypeScript
 - **Package manager:** Bun (managed via mise)
-- **Hosting target:** GitHub Pages or similar static hosting
+- **Hosting:** GitHub Pages (https://maciejgryka.github.io/kinderhaus/)
 - **Language:** German (all user-facing content is in German)
 
 ## Commands
@@ -113,6 +113,13 @@ const { title, description } = Astro.props;
 
 - `plan.md` - Full content plan and site structure
 - `image.png` - Design mockup reference
+
+## Deployment
+
+- Automatic deployment via GitHub Actions on push to `main`
+- Workflow: `.github/workflows/deploy.yml`
+- `astro.config.mjs` has `base: '/kinderhaus'` for GitHub Pages project site
+- Remove the `base` setting if switching to a custom domain
 
 ## Notes
 
