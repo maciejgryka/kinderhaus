@@ -11,8 +11,9 @@ const currentPath = Astro.url.pathname;
 
 <header class="py-6 px-4 md:px-8">
   <nav class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-    <a href="/" class="text-xl font-serif font-semibold text-text hover:text-yellow-dark transition-colors">
-      Montessori-Kinderhaus
+    <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+      <img src="/images/logo.png" alt="Montessori-Kinderhaus Logo" class="h-12 w-auto" />
+      <span class="text-xl font-serif font-semibold text-text hidden sm:inline">Montessori-Kinderhaus</span>
     </a>
 
     <button
