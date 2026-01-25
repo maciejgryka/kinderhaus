@@ -7,14 +7,14 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
 
 <Layout title="Startseite">
   <!-- Hero Section -->
-  <section class="relative py-16 md:py-24 px-4 md:px-8">
+  <section class="relative py-10 md:py-14 px-4 md:px-8">
     <!-- Decorative blobs -->
     <Blob class="absolute -top-48 -right-48 w-[48rem] h-[48rem] opacity-40" variant="yellow" shape="organic" />
     <Blob class="absolute top-40 -left-32 w-64 h-64 opacity-40" variant="cream" />
 
     <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="relative z-10">
+      <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-12 items-center">
+        <div class="relative z-10 xl:col-span-2">
           <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 leading-tight">
             Montessori-<br />Kinderhaus<br />Potsdam West
           </h1>
@@ -29,11 +29,11 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
           </a>
         </div>
 
-        <div class="relative">
+        <div class="relative xl:col-span-3">
           <img
-            src="/images/photos/IMG_0161.jpeg"
+            src="/images/photos/IMG_0161.webp"
             alt="Kind im Kinderhaus"
-            class="relative z-10 w-full max-w-2xl mx-auto rounded-2xl object-cover object-center"
+            class="relative z-10 w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto rounded-2xl object-cover object-center"
             style="aspect-ratio: 4/3;"
           />
         </div>
@@ -74,7 +74,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
         <div class="relative order-2 md:order-1">
           <Blob class="absolute -bottom-8 -left-8 w-full h-full opacity-50" variant="cream" />
           <img
-            src="/images/photos/IMG_0153.jpeg"
+            src="/images/photos/IMG_0153.webp"
             alt="Montessori-Materialien"
             class="relative z-10 w-full rounded-2xl object-cover object-center"
             style="aspect-ratio: 4/3;"
