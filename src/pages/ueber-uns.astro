@@ -6,8 +6,8 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
 
 <Layout title="Über uns" description="Erfahren Sie mehr über das Montessori-Kinderhaus Potsdam West, unser Team und unsere Pädagogik.">
   <!-- Hero Section -->
-  <section class="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden">
-    <Blob class="absolute -top-20 -right-20 w-80 h-80 opacity-40" variant="yellow" />
+  <section class="relative py-16 md:py-24 px-4 md:px-8">
+    <Blob class="absolute -top-48 -right-48 w-[48rem] h-[48rem] opacity-40" variant="yellow" shape="organic" />
 
     <div class="max-w-4xl mx-auto">
       <h1 class="font-serif text-4xl md:text-5xl font-semibold mb-6">
@@ -41,10 +41,11 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
         </div>
         <div class="relative">
           <Blob class="absolute -bottom-4 -right-4 w-full h-full opacity-40" variant="cream" />
-          <ImagePlaceholder
+          <img
+            src="/images/photos/IMG_0144.jpeg"
             alt="Kinderhaus Außenansicht"
-            class="relative z-10 w-full"
-            aspectRatio="4/3"
+            class="relative z-10 w-full rounded-2xl object-cover object-center"
+            style="aspect-ratio: 4/3;"
           />
         </div>
       </div>

@@ -9,10 +9,11 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
     description="Erfahren Sie mehr über den Tagesablauf, Mahlzeiten und Angebote im Montessori-Kinderhaus Potsdam West."
 >
     <!-- Hero Section -->
-    <section class="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden">
+    <section class="relative py-16 md:py-24 px-4 md:px-8">
         <Blob
-            class="absolute -top-20 -right-20 w-80 h-80 opacity-40"
+            class="absolute -top-48 -right-48 w-[48rem] h-[48rem] opacity-40"
             variant="yellow"
+            shape="organic"
         />
 
         <div class="max-w-4xl mx-auto">
@@ -94,10 +95,11 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                     class="absolute -bottom-8 -left-8 w-64 h-64 opacity-30"
                     variant="cream"
                 />
-                <ImagePlaceholder
+                <img
+                    src="/images/photos/IMG_0156.jpeg"
                     alt="Kinder bei der Freiarbeit"
-                    class="relative z-10 w-full max-w-2xl mx-auto"
-                    aspectRatio="16/9"
+                    class="relative z-10 w-full max-w-2xl mx-auto rounded-2xl object-cover object-center"
+                    style="aspect-ratio: 3/2;"
                 />
             </div>
         </div>
