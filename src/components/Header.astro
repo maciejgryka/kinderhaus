@@ -20,12 +20,8 @@ const currentPath = Astro.url.pathname;
             <img
                 src="/images/logo.png"
                 alt="Montessori-Kinderhaus Logo"
-                class="h-12 w-auto"
+                class="h-18 w-auto"
             />
-            <span
-                class="text-xl font-serif font-semibold text-text hidden sm:inline"
-                >Montessori-Kinderhaus</span
-            >
         </a>
 
         <button
@@ -60,7 +56,7 @@ const currentPath = Astro.url.pathname;
                             class:list={[
                                 "block py-2 md:py-0 transition-colors hover:text-yellow-dark",
                                 currentPath === item.href
-                                    ? "text-yellow-dark font-medium"
+                                    ? "text-yellow-dark"
                                     : "text-text-muted",
                             ]}
                         >
