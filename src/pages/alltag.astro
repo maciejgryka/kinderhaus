@@ -6,7 +6,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
 
 <Layout
     title="Alltag & Angebote"
-    description="Erfahren Sie mehr über den Tagesablauf, Mahlzeiten und Angebote im Montessori-Kinderhaus Potsdam West."
+    description="Erfahre mehr über den Tagesablauf, Mahlzeiten und Angebote im Montessori-Kinderhaus Potsdam West."
 >
     <!-- Hero Section -->
     <section class="relative py-16 md:py-24 px-4 md:px-8">
@@ -35,17 +35,11 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                 Unser Tagesablauf
             </h2>
 
-            <div class="grid md:grid-cols-2 gap-x-16 mb-12">
+            <div class="grid md:grid-cols-2 md:grid-flow-col md:grid-rows-4 gap-x-16 mb-12">
                 <div class="pb-8">
                     <p class="text-yellow-dark font-medium text-sm mb-1">7:30 – 9:00</p>
                     <h3 class="font-semibold">Ankommen & Freiarbeit</h3>
                     <p class="text-text-muted text-sm">Gleitendes Frühstück bis 10:00 Uhr</p>
-                </div>
-
-                <div class="pb-8">
-                    <p class="text-yellow-dark font-medium text-sm mb-1">ab 13:30</p>
-                    <h3 class="font-semibold">Freies Spiel im Garten</h3>
-                    <p class="text-text-muted text-sm">Mit gleitendem Obst-Angebot</p>
                 </div>
 
                 <div class="pb-8">
@@ -55,27 +49,33 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                 </div>
 
                 <div class="pb-8">
-                    <p class="text-yellow-dark font-medium text-sm mb-1">14:00 – 15:00</p>
-                    <h3 class="font-semibold">Eltern-Angebote</h3>
-                    <p class="text-text-muted text-sm">Von Eltern geleitete Aktivitäten</p>
-                </div>
-
-                <div class="pb-8">
                     <p class="text-yellow-dark font-medium text-sm mb-1">11:30</p>
                     <h3 class="font-semibold">Morgenkreis & Mittagessen</h3>
                     <p class="text-text-muted text-sm">2–3 Jahre: 11:30 Uhr, ab 3 Jahre: 11:45 Uhr</p>
                 </div>
 
                 <div class="pb-8">
-                    <p class="text-yellow-dark font-medium text-sm mb-1">15:00</p>
-                    <h3 class="font-semibold">Erste Abholzeit</h3>
-                    <p class="text-text-muted text-sm">Für 6-Stunden-Betreuung, freitags für alle</p>
-                </div>
-
-                <div class="pb-8">
                     <p class="text-yellow-dark font-medium text-sm mb-1">12:30 – 13:30</p>
                     <h3 class="font-semibold">Ruhezeit</h3>
                     <p class="text-text-muted text-sm">Mittagsschlaf für Kleine, ruhige Aktivitäten für Größere</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">ab 13:30</p>
+                    <h3 class="font-semibold">Freies Spiel im Garten</h3>
+                    <p class="text-text-muted text-sm">Mit gleitendem Obst-Angebot</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">14:00 – 15:00</p>
+                    <h3 class="font-semibold">Eltern-Angebote</h3>
+                    <p class="text-text-muted text-sm">Von Eltern geleitete Aktivitäten</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">15:00</p>
+                    <h3 class="font-semibold">Erste Abholzeit</h3>
+                    <p class="text-text-muted text-sm">Für 6-Stunden-Betreuung, freitags für alle</p>
                 </div>
 
                 <div class="pb-8">
@@ -216,7 +216,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                     Den Alltag erleben
                 </h2>
                 <p class="text-text-muted mb-6">
-                    Bei einer Hospitation können Sie unseren Alltag selbst
+                    Bei einer Hospitation kannst du unseren Alltag selbst
                     beobachten.
                 </p>
                 <a
