@@ -46,14 +46,6 @@ Automatic deployment on every push to `main`.
 - **Build command:** `bun run build`
 - **Output directory:** `dist`
 
-### GitHub Pages (alternative)
-
-A GitHub Actions workflow is also available at `.github/workflows/deploy.yml`.
-
-To use GitHub Pages instead:
-1. Add `base: '/kinderhaus'` to `astro.config.mjs`
-2. Enable GitHub Pages in repo Settings > Pages > Source: "GitHub Actions"
-
 ## Project Structure
 
 ```
