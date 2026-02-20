@@ -1,0 +1,183 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Blob from "../../components/Blob.astro";
+---
+
+<Layout title="Contact" description="Contact information, fees and parent participation at Montessori-Kinderhaus Potsdam West." locale="en">
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 px-4 md:px-8">
+    <Blob class="absolute -top-48 -right-48 w-[48rem] h-[48rem] opacity-40" variant="yellow" shape="organic" />
+
+    <div class="max-w-4xl mx-auto">
+      <h1 class="font-serif text-4xl md:text-5xl font-semibold mb-6">
+        Contact
+      </h1>
+      <p class="text-text-muted text-lg leading-relaxed max-w-2xl">
+        We are glad you are interested in our Kinderhaus.
+        Here you will find all the information you need to get in touch.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+          <h2 class="font-serif text-xl font-semibold mb-6">Contact Details</h2>
+
+          <address class="not-italic space-y-4 text-text-muted">
+            <div>
+              <p class="font-medium text-text">Montessori-Kinderhaus Potsdam West</p>
+              <p>Knobelsdorffstr. 7</p>
+              <p>14471 Potsdam</p>
+            </div>
+
+            <div>
+              <p class="font-medium text-text mb-1">Phone</p>
+              <a href="tel:+493316204430" class="hover:text-yellow-dark transition-colors">
+                0331 – 620 44 30
+              </a>
+            </div>
+
+            <div>
+              <p class="font-medium text-text mb-1">Email</p>
+              <a href="mailto:info@mkiha.de" class="hover:text-yellow-dark transition-colors">
+                info@mkiha.de
+              </a>
+            </div>
+          </address>
+        </div>
+
+        <div class="bg-yellow/20 rounded-2xl p-6 md:p-8">
+          <h2 class="font-serif text-xl font-semibold mb-6">Opening Hours</h2>
+
+          <ul class="space-y-3 text-text-muted">
+            <li class="flex justify-between">
+              <span>Monday – Thursday</span>
+              <span class="font-medium text-text">7:30 AM – 4:30 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Friday</span>
+              <span class="font-medium text-text">7:30 AM – 3:00 PM</span>
+            </li>
+          </ul>
+
+          <div class="mt-6 pt-6 border-t border-yellow/30">
+            <p class="font-medium text-text mb-1">Request an observation visit</p>
+            <a href="mailto:hospitationen@mkiha.de" class="text-text-muted hover:text-yellow-dark transition-colors text-sm">
+              hospitationen@mkiha.de
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Association Section -->
+  <section class="py-16 px-4 md:px-8 bg-cream-dark">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">
+        The Association
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-text-muted leading-relaxed mb-4">
+            The Montessori-Kinderhaus is run by the association <strong>"Montessori-Kinderhaus
+            Potsdam e.V."</strong> As a parent initiative, we rely on the active involvement
+            of all families.
+          </p>
+          <p class="text-text-muted leading-relaxed">
+            Parent participation is an essential part of our concept.
+            It enables us to keep childcare costs low and encourages
+            exchange among families.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <h3 class="font-serif text-lg font-semibold mb-4">Bank Details</h3>
+          <ul class="space-y-2 text-text-muted text-sm">
+            <li class="flex justify-between">
+              <span>Bank</span>
+              <span>DKB, Deutsche Kreditbank AG</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Sort code</span>
+              <span>12030000</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Account</span>
+              <span>18705772</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fees Section -->
+  <section class="py-16 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">
+        Fees
+      </h2>
+
+      <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm mb-8">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-serif text-lg font-semibold mb-4">Parent Contribution</h3>
+            <p class="text-text-muted leading-relaxed mb-4">
+              Parent contributions are income-based and depend on
+              the age of the child and the number of children in your household.
+            </p>
+            <p class="text-text-muted leading-relaxed">
+              <strong>From the child's 3rd birthday the parent contribution is waived</strong> –
+              you then only pay meal and additional costs.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-serif text-lg font-semibold mb-4">Additional Costs</h3>
+            <ul class="space-y-3">
+              <li class="flex justify-between items-center pb-3 border-b border-cream-dark">
+                <span class="text-text-muted">Organic lunch</span>
+                <span class="font-medium">&euro;37.50 / month</span>
+              </li>
+              <li class="flex justify-between items-center pb-3 border-b border-cream-dark">
+                <span class="text-text-muted">Additional meals</span>
+                <span class="font-medium">&euro;28.00 / month</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <span class="text-text-muted">Individual contribution</span>
+                <span class="font-medium">&euro;30.00 / month</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="py-16 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">
+        How to Find Us
+      </h2>
+
+      <div class="rounded-2xl overflow-hidden h-80 md:h-[28rem]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.8!2d13.0165!3d52.4005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85f3c8b5c1b0d%3A0x4c5c8f5c8b5c1b0d!2sKnobelsdorffstra%C3%9Fe%207%2C%2014471%20Potsdam!5e0!3m2!1sen!2sde!4v1700000000000!5m2!1sen!2sde"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Location of Montessori-Kinderhaus Potsdam West"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</Layout>

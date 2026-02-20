@@ -2,17 +2,27 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { getLocale, getAlternatePath, t } from "../i18n/utils";
+import type { Locale } from "../i18n/utils";
 
 interface Props {
   title: string;
   description?: string;
+  locale?: Locale;
 }
 
-const { title, description = "Montessori-Kinderhaus Potsdam West - Elterninitiative im Potsdamer Westen" } = Astro.props;
+const detectedLocale = getLocale(Astro.url);
+const locale = Astro.props.locale ?? detectedLocale;
+const defaultDesc = t(locale, "defaultDescription");
+const { title, description = defaultDesc } = Astro.props;
+const siteSuffix = t(locale, "siteSuffix");
+const dePath = locale === "de" ? Astro.url.pathname : getAlternatePath(Astro.url, "de");
+const enPath = locale === "en" ? Astro.url.pathname : getAlternatePath(Astro.url, "en");
+const siteBase = Astro.site?.origin ?? "";
 ---
 
 <!doctype html>
-<html lang="de">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,19 +34,21 @@ const { title, description = "Montessori-Kinderhaus Potsdam West - Elterninitiat
       href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>{title} | Montessori-Kinderhaus Potsdam West</title>
+    <link rel="alternate" hreflang="de" href={siteBase + dePath} />
+    <link rel="alternate" hreflang="en" href={siteBase + enPath} />
+    <title>{title} | {siteSuffix}</title>
   </head>
   <body class="min-h-screen flex flex-col">
-    <Header />
+    <Header locale={locale} />
     <main class="flex-1 overflow-x-clip">
       <slot />
     </main>
-    <Footer />
+    <Footer locale={locale} />
 
     <button
       id="back-to-top"
       class="fixed bottom-6 right-6 z-50 bg-yellow hover:bg-yellow-dark text-text w-12 h-12 rounded-full shadow-md flex items-center justify-center transition-all opacity-0 translate-y-4 pointer-events-none"
-      aria-label="Nach oben scrollen"
+      aria-label={t(locale, "backToTop")}
     >
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
