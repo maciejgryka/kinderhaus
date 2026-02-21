@@ -1,12 +1,18 @@
 ---
-const navItems = [
-    { label: "Über uns", href: "/ueber-uns" },
-    { label: "Anmeldung & Aufnahme", href: "/anmeldung" },
-    { label: "Alltag & Angebote", href: "/alltag" },
-    { label: "Kontakt", href: "/kontakt" },
-];
+import { t, getNavItems, getAlternatePath } from "../i18n/utils";
+import type { Locale } from "../i18n/utils";
 
+interface Props {
+  locale?: Locale;
+}
+
+const locale: Locale = Astro.props.locale ?? "de";
+const navItems = getNavItems(locale);
 const currentPath = Astro.url.pathname;
+const targetLocale = locale === "de" ? "en" : "de";
+const switchPath = getAlternatePath(Astro.url, targetLocale);
+const switchLabel = t(locale, "langSwitch");
+const homeHref = locale === "en" ? "/en/" : "/";
 ---
 
 <header class="py-4 px-4 md:px-8 sticky top-0 z-50 bg-cream/90 backdrop-blur-sm">
@@ -14,7 +20,7 @@ const currentPath = Astro.url.pathname;
         class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4"
     >
         <a
-            href="/"
+            href={homeHref}
             class="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
             <img
@@ -27,7 +33,7 @@ const currentPath = Astro.url.pathname;
         <button
             id="mobile-menu-button"
             class="md:hidden absolute top-6 right-4 p-2"
-            aria-label="Menü öffnen"
+            aria-label={t(locale, "nav.menuOpen")}
             aria-expanded="false"
         >
             <svg
@@ -46,7 +52,7 @@ const currentPath = Astro.url.pathname;
 
         <ul
             id="nav-menu"
-            class="hidden md:flex flex-col md:flex-row gap-2 md:gap-8 text-md"
+            class="hidden md:flex flex-col md:flex-row gap-2 md:gap-8 text-md items-center"
         >
             {
                 navItems.map((item) => (
@@ -65,6 +71,14 @@ const currentPath = Astro.url.pathname;
                     </li>
                 ))
             }
+            <li>
+                <a
+                    href={switchPath}
+                    class="block py-2 md:py-0 text-sm font-medium border border-text/20 px-3 py-1 rounded-full hover:bg-yellow/20 transition-colors"
+                >
+                    {switchLabel}
+                </a>
+            </li>
         </ul>
     </nav>
 </header>

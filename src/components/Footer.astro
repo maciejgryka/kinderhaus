@@ -1,12 +1,22 @@
 ---
+import { t } from "../i18n/utils";
+import type { Locale } from "../i18n/utils";
+
+interface Props {
+  locale?: Locale;
+}
+
+const locale: Locale = Astro.props.locale ?? "de";
 const currentYear = new Date().getFullYear();
+const imprintHref = locale === "en" ? "/en/imprint" : "/impressum";
+const privacyHref = locale === "en" ? "/en/privacy" : "/datenschutz";
 ---
 
 <footer class="bg-cream-dark py-12 px-4 md:px-8 mt-16">
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <div>
-        <h3 class="font-serif font-semibold text-lg mb-4">Kontakt</h3>
+        <h3 class="font-serif font-semibold text-lg mb-4">{t(locale, "footer.contact")}</h3>
         <address class="not-italic text-text-muted text-sm leading-relaxed">
           Montessori-Kinderhaus Potsdam West<br />
           Knobelsdorffstr. 7<br />
@@ -21,24 +31,24 @@ const currentYear = new Date().getFullYear();
       </div>
 
       <div>
-        <h3 class="font-serif font-semibold text-lg mb-4">Öffnungszeiten</h3>
+        <h3 class="font-serif font-semibold text-lg mb-4">{t(locale, "footer.hours")}</h3>
         <p class="text-text-muted text-sm leading-relaxed">
-          Mo – Do: 7:30 – 16:30 Uhr<br />
-          Fr: 7:30 – 15:00 Uhr
+          {t(locale, "footer.hoursMoTh")}<br />
+          {t(locale, "footer.hoursFr")}
         </p>
       </div>
 
       <div>
-        <h3 class="font-serif font-semibold text-lg mb-4">Rechtliches</h3>
+        <h3 class="font-serif font-semibold text-lg mb-4">{t(locale, "footer.legal")}</h3>
         <ul class="text-text-muted text-sm space-y-2">
           <li>
-            <a href="/impressum" class="hover:text-yellow-dark transition-colors">
-              Impressum
+            <a href={imprintHref} class="hover:text-yellow-dark transition-colors">
+              {t(locale, "footer.imprint")}
             </a>
           </li>
           <li>
-            <a href="/datenschutz" class="hover:text-yellow-dark transition-colors">
-              Datenschutz
+            <a href={privacyHref} class="hover:text-yellow-dark transition-colors">
+              {t(locale, "footer.privacy")}
             </a>
           </li>
         </ul>

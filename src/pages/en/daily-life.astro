@@ -1,0 +1,223 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Blob from "../../components/Blob.astro";
+---
+
+<Layout
+    title="Daily Life & Activities"
+    description="Learn about the daily routine, meals and activities at Montessori-Kinderhaus Potsdam West."
+    locale="en"
+>
+    <!-- Hero Section -->
+    <section class="relative py-16 md:py-24 px-4 md:px-8">
+        <Blob
+            class="absolute -top-48 -right-48 w-[48rem] h-[48rem] opacity-40"
+            variant="yellow"
+            shape="organic"
+        />
+
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-serif text-4xl md:text-5xl font-semibold mb-6">
+                Daily Life & Activities
+            </h1>
+            <p class="text-text-muted text-lg leading-relaxed max-w-2xl">
+                A day at the Montessori-Kinderhaus follows a clear rhythm
+                that gives children security while leaving room for free work.
+            </p>
+        </div>
+    </section>
+
+    <!-- Daily Schedule Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">
+                Our Daily Schedule
+            </h2>
+
+            <div class="grid md:grid-cols-2 md:grid-flow-col md:grid-rows-4 gap-x-16 mb-12">
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">7:30 – 9:00 AM</p>
+                    <h3 class="font-semibold">Arrival & Free Work</h3>
+                    <p class="text-text-muted text-sm">Rolling breakfast until 10:00 AM</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">9:00 – 11:30 AM</p>
+                    <h3 class="font-semibold">Free Work & Activities</h3>
+                    <p class="text-text-muted text-sm">Free work, group activities, outdoor play</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">11:30 AM</p>
+                    <h3 class="font-semibold">Circle Time & Lunch</h3>
+                    <p class="text-text-muted text-sm">Ages 2–3: 11:30 AM, ages 3+: 11:45 AM</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">12:30 – 1:30 PM</p>
+                    <h3 class="font-semibold">Rest Time</h3>
+                    <p class="text-text-muted text-sm">Nap for little ones, quiet activities for older children</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">from 1:30 PM</p>
+                    <h3 class="font-semibold">Free Play in the Garden</h3>
+                    <p class="text-text-muted text-sm">With rolling fruit snack</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">2:00 – 3:00 PM</p>
+                    <h3 class="font-semibold">Parent-Led Activities</h3>
+                    <p class="text-text-muted text-sm">Activities led by parents</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">3:00 PM</p>
+                    <h3 class="font-semibold">First Pick-Up Time</h3>
+                    <p class="text-text-muted text-sm">For 6-hour care, Fridays for everyone</p>
+                </div>
+
+                <div class="pb-8">
+                    <p class="text-yellow-dark font-medium text-sm mb-1">3:10 – 4:30 PM</p>
+                    <h3 class="font-semibold">Afternoon Snack & Pick-Up</h3>
+                    <p class="text-text-muted text-sm">Bread snack from 3:10 PM, flexible pick-up</p>
+                </div>
+            </div>
+
+            <p class="text-text-muted text-sm mb-12 p-4 bg-white rounded-xl">
+                <strong>Note:</strong> On Wednesdays from 3:00 PM there is a team meeting;
+                care is then provided jointly by staff and parents.
+            </p>
+
+            <div class="relative">
+                <Blob
+                    class="absolute -bottom-8 -left-8 w-64 h-64 opacity-30"
+                    variant="cream"
+                />
+                <img
+                    src="/images/photos/IMG_0156.webp"
+                    alt="Children during free work"
+                    class="relative z-10 w-full max-w-2xl mx-auto rounded-2xl object-cover object-center"
+                    style="aspect-ratio: 3/2;"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Meals Section -->
+    <section class="py-16 px-4 md:px-8 bg-cream-dark">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">
+                Meals
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <p class="text-text-muted leading-relaxed mb-6">
+                        We value healthy, balanced nutrition. Lunch is delivered
+                        fresh daily by an organic caterer. Breakfast and afternoon
+                        snacks are brought from home or prepared together.
+                    </p>
+
+                    <p class="text-text-muted leading-relaxed">
+                        Families with low income can apply for reimbursement of
+                        meal costs through the <strong>Education Package</strong>
+                        (Bildungspaket).
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-lg font-semibold mb-4">
+                        Monthly Costs
+                    </h3>
+                    <ul class="space-y-3">
+                        <li
+                            class="flex justify-between items-center pb-3 border-b border-cream-dark"
+                        >
+                            <span class="text-text-muted">Organic lunch</span>
+                            <span class="font-medium">&euro;37.50</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="text-text-muted">Additional meals</span>
+                            <span class="font-medium">&euro;28.00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Activities Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">
+                Special Activities
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-xl font-semibold mb-3">
+                        Pre-School Preparation
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        For children in their last year before school, we offer
+                        weekly pre-school sessions. Here they are specifically
+                        prepared for the transition to primary school.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-xl font-semibold mb-3">
+                        Montessori Materials
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Our rooms are equipped with high-quality Montessori
+                        materials that enable children to discover and understand
+                        concepts independently.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-xl font-semibold mb-3">
+                        Garden & Outdoor Area
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Our garden offers plenty of space for playing, climbing
+                        and exploring. The children spend time outdoors every day.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-xl font-semibold mb-3">
+                        Celebrations & Outings
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Throughout the year we celebrate together and go on
+                        outings that strengthen our sense of community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="bg-yellow/30 rounded-3xl p-8 md:p-12">
+                <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-4">
+                    Experience Our Daily Life
+                </h2>
+                <p class="text-text-muted mb-6">
+                    During an observation visit you can see our everyday
+                    routine for yourself.
+                </p>
+                <a
+                    href="/en/registration#hospitation"
+                    class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+                >
+                    Request an Observation Visit
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>

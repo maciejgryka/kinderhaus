@@ -1,0 +1,238 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Blob from "../../components/Blob.astro";
+---
+
+<Layout
+    title="About Us"
+    description="Learn more about Montessori-Kinderhaus Potsdam West, our team and our pedagogy."
+    locale="en"
+>
+    <!-- Hero Section -->
+    <section class="relative py-16 md:py-24 px-4 md:px-8">
+        <Blob
+            class="absolute -top-48 -right-48 w-[48rem] h-[48rem] opacity-40"
+            variant="yellow"
+            shape="organic"
+        />
+
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-serif text-4xl md:text-5xl font-semibold mb-6">
+                About Us
+            </h1>
+            <p class="text-text-muted text-lg leading-relaxed max-w-2xl">
+                Since October 2002 we have been supporting children in Potsdam
+                West on their journey – following the principles of Maria
+                Montessori and with great commitment from our parent initiative.
+            </p>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2
+                        class="font-serif text-2xl md:text-3xl font-semibold mb-4"
+                    >
+                        Our History
+                    </h2>
+                    <p class="text-text-muted leading-relaxed mb-4">
+                        The Montessori-Kinderhaus opened its doors in October
+                        2002 in Potsdam West, near Sanssouci Park. Since then it
+                        has been run by the association "Montessori-Kinderhaus
+                        Potsdam e.V." as a parent initiative.
+                    </p>
+                    <p class="text-text-muted leading-relaxed">
+                        What began as a small initiative is today a vibrant
+                        place for up to 66 children from their first birthday
+                        until school entry. Our success is built on the mindful
+                        collaboration of educators, children and dedicated
+                        parents.
+                    </p>
+                </div>
+                <div class="relative">
+                    <Blob
+                        class="absolute -bottom-4 -right-4 w-full h-full opacity-40"
+                        variant="cream"
+                    />
+                    <img
+                        src="/images/photos/IMG_0144.webp"
+                        alt="Kinderhaus exterior"
+                        class="relative z-10 w-full rounded-2xl object-cover object-center"
+                        style="aspect-ratio: 4/3;"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pedagogy Section -->
+    <section id="paedagogik" class="py-16 px-4 md:px-8 bg-cream-dark">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">
+                Our Pedagogy
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-xl font-semibold mb-3">
+                        The Child at the Centre
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        We see every child as a whole person. Our educators see
+                        themselves as companions and observers, not instructors.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-xl font-semibold mb-3">
+                        Free Choice of Activities
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Children follow their sensitive periods and interests at
+                        their own pace. The prepared environment enables
+                        independent action.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-xl font-semibold mb-3">
+                        Experiencing Boundaries
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Children experience boundaries through the order of the
+                        room, the materials themselves and living together with
+                        others – quite naturally.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-xl font-semibold mb-3">
+                        Respect & Tolerance
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        We foster mutual respect and peaceful coexistence.
+                        Social learning happens in the group, complementing the
+                        family.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-serif text-xl font-semibold mb-3">
+                        Diversity & Inclusion
+                    </h3>
+                    <p class="text-text-muted leading-relaxed mb-3">
+                        We welcome and embrace diversity as an enrichment. Our
+                        Kinderhaus is barrier-free and our team includes
+                        specialists in inclusive care.
+                    </p>
+                    <a
+                        href="/en/diversity"
+                        class="text-yellow-dark hover:text-text transition-colors font-medium text-sm"
+                    >
+                        More about Diversity & Inclusion →
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-text-muted text-sm">
+                <strong>Please note:</strong> Admission to our Kinderhaus does not
+                guarantee admission to the Montessori secondary school, which operates
+                independently.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-8">
+                Our Team
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div>
+                    <p class="text-text-muted leading-relaxed mb-6">
+                        Our team consists of <strong
+                            >nine state-certified educators</strong
+                        >, all of whom have completed or are completing
+                        additional Montessori training. They are supported by
+                        interns and dedicated parents.
+                    </p>
+
+                    <h3 class="font-serif text-xl font-semibold mb-4">
+                        Our Groups
+                    </h3>
+                    <ul class="space-y-3 text-text-muted">
+                        <li class="flex items-start">
+                            <span
+                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
+                            ></span>
+                            <span
+                                ><strong>Toddler group:</strong> Children under 3,
+                                cared for by 3 educators</span
+                            >
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
+                            ></span>
+                            <span
+                                ><strong>Mixed-age group 1:</strong> Age 2.5 to school
+                                entry, 2 educators</span
+                            >
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
+                            ></span>
+                            <span
+                                ><strong>Mixed-age group 2:</strong> Age 2.5 to school
+                                entry, 2 educators</span
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-yellow/20 rounded-2xl p-6">
+                    <h3 class="font-serif text-xl font-semibold mb-4">
+                        Opening Hours
+                    </h3>
+                    <ul class="space-y-2 text-text-muted">
+                        <li class="flex justify-between">
+                            <span>Monday – Thursday</span>
+                            <span class="font-medium">7:30 AM – 4:30 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Friday</span>
+                            <span class="font-medium">7:30 AM – 3:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="bg-yellow/30 rounded-3xl p-8 md:p-12">
+                <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-4">
+                    Get to Know Us
+                </h2>
+                <p class="text-text-muted mb-6">
+                    Visit us for an observation visit or at our next
+                    get-to-know-us coffee.
+                </p>
+                <a
+                    href="/en/registration"
+                    class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+                >
+                    Registration
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>
