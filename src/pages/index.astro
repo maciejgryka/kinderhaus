@@ -6,179 +6,229 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
 ---
 
 <Layout title="Startseite">
-  <!-- Hero Section -->
-  <section class="relative py-10 md:py-14 px-4 md:px-8">
-    <!-- Decorative blob -->
-    <Blob class="absolute top-40 -left-32 w-64 h-64 opacity-40" variant="cream" />
-
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-12 items-center">
-        <div class="relative z-10 xl:col-span-2">
-          <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 leading-tight">
-            Montessori-<br />Kinderhaus<br />Potsdam West
-          </h1>
-          <p class="text-text-muted text-lg mb-8">
-            Elterninitiative im Potsdamer Westen
-          </p>
-          <a
-            href="/ueber-uns"
-            class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
-          >
-            Mehr über unser Kinderhaus
-          </a>
-        </div>
-
-        <div class="relative xl:col-span-3">
-          <img
-            src="/images/photos/IMG_0161.webp"
-            alt="Kind im Kinderhaus"
-            class="relative z-10 w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto rounded-2xl object-cover object-center"
-            style="aspect-ratio: 4/3;"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature Cards Section -->
-  <section class="py-16 px-4 md:px-8">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-3 gap-6">
-        <FeatureCard
-          title="Anmeldung"
-          description="Alle Infos zur Anmeldung und Warteliste findest du hier. Nächstes Kennenlern-Café: 04.03.2026"
-          linkText="Zur Anmeldung"
-          linkHref="/anmeldung"
+    <!-- Hero Section -->
+    <section class="relative py-10 md:py-14 px-4 md:px-8">
+        <!-- Decorative blob -->
+        <Blob
+            class="absolute top-40 -left-32 w-64 h-64 opacity-40"
+            variant="cream"
         />
-        <FeatureCard
-          title="Hospitation"
-          description="Lerne unser Kinderhaus im Alltag kennen. Hospitationen finden dienstags und donnerstags statt."
-          linkText="Hospitation"
-          linkHref="/anmeldung#hospitation"
-        />
-        <FeatureCard
-          title="Pädagogik"
-          description="Entdecke die Montessori-Pädagogik und unseren Ansatz der kindgerechten Begleitung."
-          linkText="Mehr zur Pädagogik"
-          linkHref="/ueber-uns#paedagogik"
-        />
-      </div>
-    </div>
-  </section>
 
-  <!-- Pädagogik & Werte Section -->
-  <section class="py-16 px-4 md:px-8">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="relative order-2 md:order-1">
-          <Blob class="absolute -bottom-8 -left-8 w-full h-full opacity-50" variant="cream" />
-          <img
-            src="/images/photos/IMG_0153.webp"
-            alt="Montessori-Materialien"
-            class="relative z-10 w-full rounded-2xl object-cover object-center"
-            style="aspect-ratio: 4/3;"
-          />
-        </div>
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-12 items-center">
+                <div class="relative z-10 xl:col-span-2">
+                    <h1
+                        class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
+                    >
+                        Montessori<br />Kinderhaus<br /><span
+                            class="font-light text-text-muted">Potsdam West</span
+                        >
+                    </h1>
+                    <p class="text-text-muted text-lg mb-8">
+                        Elterninitiative im Potsdamer Westen
+                    </p>
+                    <a
+                        href="/ueber-uns"
+                        class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+                    >
+                        Mehr über unser Kinderhaus
+                    </a>
+                </div>
 
-        <div class="order-1 md:order-2">
-          <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-6">
-            Unsere Pädagogik<br />& Werte
-          </h2>
-          <p class="text-text-muted leading-relaxed mb-4">
-            Unsere Einrichtung ist geprägt von Montessoris Grundsatz, das Kind in seiner Gesamtheit zu sehen.
-            Wir verstehen uns als Begleiter*innen, die den Kindern eine vorbereitete Umgebung bieten.
-          </p>
-          <p class="text-text-muted leading-relaxed mb-6">
-            Freie Wahl der Aktivitäten ermöglicht es den Kindern, ihren sensiblen Phasen zu folgen
-            und in ihrem eigenen Rhythmus zu lernen. Durch entsprechende Aktivitäten in der Gemeinschaft
-            fördern wir gegenseitigen Respekt und Toleranz.
-          </p>
-          <a
-            href="/ueber-uns#paedagogik"
-            class="inline-flex items-center font-medium text-yellow-dark hover:text-text transition-colors"
-          >
-            Mehr erfahren
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Key Facts Section -->
-  <section class="py-16 px-4 md:px-8">
-    <div class="max-w-6xl mx-auto">
-      <div class="relative">
-        <Blob class="absolute top-0 right-0 w-96 h-96 opacity-30" variant="yellow" />
-
-        <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-4">
-              Von 1 bis 6 Jahren<br />zu uns
-            </h2>
-            <p class="text-text-muted leading-relaxed mb-6">
-              Du erreichst uns im Potsdamer Westen, in der Nähe vom Park Sanssouci.
-              Wir betreuen Kinder vom ersten Geburtstag bis zum Schuleintritt
-              in drei altersgemischten Gruppen.
-            </p>
-            <a
-              href="/kontakt"
-              class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
-            >
-              Kontakt aufnehmen
-            </a>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-white rounded-2xl p-6 shadow-sm">
-              <p class="font-serif text-3xl font-semibold text-yellow-dark mb-1">66</p>
-              <p class="text-text-muted text-sm">Kinder</p>
+                <div class="relative xl:col-span-3">
+                    <img
+                        src="/images/photos/IMG_0161.webp"
+                        alt="Kind im Kinderhaus"
+                        class="relative z-10 w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto rounded-2xl object-cover object-center"
+                        style="aspect-ratio: 4/3;"
+                    />
+                </div>
             </div>
-            <div class="bg-white rounded-2xl p-6 shadow-sm">
-              <p class="font-serif text-3xl font-semibold text-yellow-dark mb-1">3</p>
-              <p class="text-text-muted text-sm">Gruppen</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 shadow-sm">
-              <p class="font-serif text-3xl font-semibold text-yellow-dark mb-1">9</p>
-              <p class="text-text-muted text-sm">Pädagog*innen</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 shadow-sm">
-              <p class="font-serif text-3xl font-semibold text-yellow-dark mb-1">2002</p>
-              <p class="text-text-muted text-sm">Gegründet</p>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section class="py-16 px-4 md:px-8">
-    <div class="max-w-3xl mx-auto text-center">
-      <div class="bg-yellow/30 rounded-3xl p-8 md:p-12">
-        <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-4">
-          Interesse an unserem Kinderhaus?
-        </h2>
-        <p class="text-text-muted mb-6">
-          Besuche uns beim nächsten Kennenlern-Café oder vereinbare eine Hospitation.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/anmeldung"
-            class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
-          >
-            Zur Anmeldung
-          </a>
-          <a
-            href="/kontakt"
-            class="inline-block border border-text/20 hover:bg-white/50 text-text font-medium px-6 py-3 rounded-full transition-colors"
-          >
-            Kontakt
-          </a>
+    <!-- Feature Cards Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-6">
+                <FeatureCard
+                    title="Anmeldung"
+                    description="Alle Infos zur Anmeldung und Warteliste findest du hier. Nächstes Kennenlern-Café: 04.03.2026"
+                    linkText="Zur Anmeldung"
+                    linkHref="/anmeldung"
+                />
+                <FeatureCard
+                    title="Hospitation"
+                    description="Lerne unser Kinderhaus im Alltag kennen. Hospitationen finden dienstags und donnerstags statt."
+                    linkText="Hospitation"
+                    linkHref="/anmeldung#hospitation"
+                />
+                <FeatureCard
+                    title="Pädagogik"
+                    description="Entdecke die Montessori-Pädagogik und unseren Ansatz der kindgerechten Begleitung."
+                    linkText="Mehr zur Pädagogik"
+                    linkHref="/ueber-uns#paedagogik"
+                />
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Pädagogik & Werte Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative order-2 md:order-1">
+                    <Blob
+                        class="absolute -bottom-8 -left-8 w-full h-full opacity-50"
+                        variant="cream"
+                    />
+                    <img
+                        src="/images/photos/IMG_0153.webp"
+                        alt="Montessori-Materialien"
+                        class="relative z-10 w-full rounded-2xl object-cover object-center"
+                        style="aspect-ratio: 4/3;"
+                    />
+                </div>
+
+                <div class="order-1 md:order-2">
+                    <h2
+                        class="font-serif text-3xl md:text-4xl font-semibold mb-6"
+                    >
+                        Unsere Pädagogik<br />& Werte
+                    </h2>
+                    <p class="text-text-muted leading-relaxed mb-4">
+                        Unsere Einrichtung ist geprägt von Montessoris
+                        Grundsatz, das Kind in seiner Gesamtheit zu sehen. Wir
+                        verstehen uns als Begleiter*innen, die den Kindern eine
+                        vorbereitete Umgebung bieten.
+                    </p>
+                    <p class="text-text-muted leading-relaxed mb-6">
+                        Freie Wahl der Aktivitäten ermöglicht es den Kindern,
+                        ihren sensiblen Phasen zu folgen und in ihrem eigenen
+                        Rhythmus zu lernen. Durch entsprechende Aktivitäten in
+                        der Gemeinschaft fördern wir gegenseitigen Respekt und
+                        Toleranz.
+                    </p>
+                    <a
+                        href="/ueber-uns#paedagogik"
+                        class="inline-flex items-center font-medium text-yellow-dark hover:text-text transition-colors"
+                    >
+                        Mehr erfahren
+                        <svg
+                            class="w-4 h-4 ml-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Facts Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="relative">
+                <Blob
+                    class="absolute top-0 right-0 w-96 h-96 opacity-30"
+                    variant="yellow"
+                />
+
+                <div
+                    class="relative z-10 grid md:grid-cols-2 gap-12 items-center"
+                >
+                    <div>
+                        <h2
+                            class="font-serif text-3xl md:text-4xl font-semibold mb-4"
+                        >
+                            Von 1 bis 6 Jahren<br />zu uns
+                        </h2>
+                        <p class="text-text-muted leading-relaxed mb-6">
+                            Du erreichst uns im Potsdamer Westen, in der Nähe
+                            vom Park Sanssouci. Wir betreuen Kinder vom ersten
+                            Geburtstag bis zum Schuleintritt in drei
+                            altersgemischten Gruppen.
+                        </p>
+                        <a
+                            href="/kontakt"
+                            class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+                        >
+                            Kontakt aufnehmen
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-2xl p-6 shadow-sm">
+                            <p
+                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                            >
+                                66
+                            </p>
+                            <p class="text-text-muted text-sm">Kinder</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-sm">
+                            <p
+                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                            >
+                                3
+                            </p>
+                            <p class="text-text-muted text-sm">Gruppen</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-sm">
+                            <p
+                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                            >
+                                9
+                            </p>
+                            <p class="text-text-muted text-sm">Pädagog*innen</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-sm">
+                            <p
+                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                            >
+                                2002
+                            </p>
+                            <p class="text-text-muted text-sm">Gegründet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="bg-yellow/30 rounded-3xl p-8 md:p-12">
+                <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-4">
+                    Interesse an unserem Kinderhaus?
+                </h2>
+                <p class="text-text-muted mb-6">
+                    Besuche uns beim nächsten Kennenlern-Café oder vereinbare
+                    eine Hospitation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a
+                        href="/anmeldung"
+                        class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+                    >
+                        Zur Anmeldung
+                    </a>
+                    <a
+                        href="/kontakt"
+                        class="inline-block border border-text/20 hover:bg-white/50 text-text font-medium px-6 py-3 rounded-full transition-colors"
+                    >
+                        Kontakt
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </Layout>
