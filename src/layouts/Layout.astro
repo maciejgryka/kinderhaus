@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Blob from "../components/Blob.astro";
 import { getLocale, getAlternatePath, t } from "../i18n/utils";
 import type { Locale } from "../i18n/utils";
 
@@ -40,8 +41,11 @@ const siteBase = Astro.site?.origin ?? "";
   </head>
   <body class="min-h-screen flex flex-col">
     <Header locale={locale} />
-    <main class="flex-1 overflow-x-clip">
-      <slot />
+    <main class="flex-1 overflow-x-clip relative">
+      <Blob class="absolute -top-48 -right-48 w-[48rem] h-[48rem] opacity-40" variant="yellow" shape="organic" />
+      <div class="relative z-10">
+        <slot />
+      </div>
     </main>
     <Footer locale={locale} />
 
