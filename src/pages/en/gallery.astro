@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const galleryGlob = import.meta.glob(
+    "/public/images/gallery/*.{jpg,jpeg,png,webp}",
+);
+const imagePaths = Object.keys(galleryGlob)
+    .map((path) => path.replace("/public", ""))
+    .sort();
+---
+
+<Layout
+    title="Gallery"
+    description="Impressions from Montessori-Kinderhaus Potsdam West."
+    locale="en"
+>
+    <section class="relative py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-serif text-4xl md:text-5xl font-semibold mb-6">
+                Gallery
+            </h1>
+        </div>
+    </section>
+
+    <section class="pb-16 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {
+                    imagePaths.map((src) => (
+                        <a
+                            href={src}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="block overflow-hidden rounded-2xl hover:opacity-90 transition-opacity"
+                        >
+                            <img
+                                src={src}
+                                alt=""
+                                class="w-full h-full object-cover"
+                                style="aspect-ratio: 4/3;"
+                                loading="lazy"
+                            />
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+</Layout>

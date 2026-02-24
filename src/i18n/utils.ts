@@ -24,6 +24,7 @@ const pageMap: Record<string, string> = {
   'vielfalt': 'diversity',
   'impressum': 'imprint',
   'datenschutz': 'privacy',
+  'galerie': 'gallery',
   '404': '404',
 };
 
