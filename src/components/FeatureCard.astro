@@ -4,21 +4,19 @@ interface Props {
   description: string;
   linkText: string;
   linkHref: string;
+  icon?: string;
 }
 
-const { title, description, linkText, linkHref } = Astro.props;
+const { title, description, linkText, linkHref, icon } = Astro.props;
 ---
 
-<div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow">
-  <h3 class="font-serif text-xl font-semibold mb-3">{title}</h3>
+<a href={linkHref} class="block bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow text-center no-underline text-inherit">
+  <h3 class="font-heading text-xl font-semibold mb-3">{title}</h3>
   <p class="text-text-muted text-sm leading-relaxed mb-4">{description}</p>
-  <a
-    href={linkHref}
-    class="inline-flex items-center text-sm font-medium text-yellow-dark hover:text-text transition-colors"
-  >
+  <span class="inline-flex items-center text-sm font-medium text-yellow-dark">
     {linkText}
     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
     </svg>
-  </a>
-</div>
+  </span>
+</a>

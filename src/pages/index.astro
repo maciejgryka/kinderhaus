@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import FeatureCard from "../components/FeatureCard.astro";
 import Blob from "../components/Blob.astro";
 import ImagePlaceholder from "../components/ImagePlaceholder.astro";
+import { nextCafeDate } from "../data/config";
 ---
 
 <Layout title="Startseite">
@@ -18,7 +19,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
             <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-12 items-center">
                 <div class="relative z-10 xl:col-span-2">
                     <h1
-                        class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
+                        class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
                     >
                         Montessori<br />Kinderhaus<br /><span
                             class="font-light text-text-muted">Potsdam West</span
@@ -29,12 +30,20 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                         <li>🤝 Gemeinschaft & Mitgestaltung</li>
                         <li>🎨 Hochwertige Montessori-Materialien</li>
                     </ul>
+                    <a
+                        href="/anmeldung"
+                        class="inline-block mt-8 bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+                    >
+                        Jetzt kennenlernen
+                    </a>
                 </div>
 
                 <div class="relative xl:col-span-3">
                     <img
                         src="/images/photos/IMG_0161.webp"
-                        alt="Kind im Kinderhaus"
+                        alt="Kinder arbeiten mit Montessori-Materialien im Kinderhaus"
+                        width="1600"
+                        height="1200"
                         class="relative z-10 w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto rounded-2xl object-cover object-center"
                         style="aspect-ratio: 4/3;"
                     />
@@ -49,21 +58,24 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
             <div class="grid md:grid-cols-3 gap-6">
                 <FeatureCard
                     title="Anmeldung"
-                    description="Alle Infos zur Anmeldung und Warteliste findest du hier. Nächstes Kennenlern-Café: 04.03.2026"
+                    description={`Alle Infos zur Anmeldung und Warteliste findest du hier. Nächstes Kennenlern-Café: ${nextCafeDate}`}
                     linkText="Zur Anmeldung"
                     linkHref="/anmeldung"
+                    icon="📋"
                 />
                 <FeatureCard
                     title="Hospitation"
                     description="Lerne unser Kinderhaus im Alltag kennen. Hospitationen finden dienstags und donnerstags statt."
                     linkText="Hospitation"
                     linkHref="/anmeldung#hospitation"
+                    icon="👀"
                 />
                 <FeatureCard
                     title="Pädagogik"
                     description="Entdecke die Montessori-Pädagogik und unseren Ansatz der kindgerechten Begleitung."
                     linkText="Mehr zur Pädagogik"
                     linkHref="/ueber-uns#paedagogik"
+                    icon="📖"
                 />
             </div>
         </div>
@@ -81,6 +93,9 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                     <img
                         src="/images/photos/IMG_0153.webp"
                         alt="Montessori-Materialien"
+                        width="1600"
+                        height="1200"
+                        loading="lazy"
                         class="relative z-10 w-full rounded-2xl object-cover object-center"
                         style="aspect-ratio: 4/3;"
                     />
@@ -88,7 +103,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
 
                 <div class="order-1 md:order-2">
                     <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-6"
+                        class="font-heading text-3xl md:text-4xl font-semibold mb-6"
                     >
                         Unsere Pädagogik<br />& Werte
                     </h2>
@@ -142,7 +157,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                 >
                     <div>
                         <h2
-                            class="font-serif text-3xl md:text-4xl font-semibold mb-4"
+                            class="font-heading text-3xl md:text-4xl font-semibold mb-4"
                         >
                             Von 1 bis 6 Jahren<br />zu uns
                         </h2>
@@ -163,7 +178,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-white rounded-2xl p-6 shadow-sm">
                             <p
-                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                                class="font-heading text-3xl font-semibold text-yellow-dark mb-1"
                             >
                                 66
                             </p>
@@ -171,7 +186,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                         </div>
                         <div class="bg-white rounded-2xl p-6 shadow-sm">
                             <p
-                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                                class="font-heading text-3xl font-semibold text-yellow-dark mb-1"
                             >
                                 3
                             </p>
@@ -179,7 +194,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                         </div>
                         <div class="bg-white rounded-2xl p-6 shadow-sm">
                             <p
-                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                                class="font-heading text-3xl font-semibold text-yellow-dark mb-1"
                             >
                                 9
                             </p>
@@ -187,7 +202,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
                         </div>
                         <div class="bg-white rounded-2xl p-6 shadow-sm">
                             <p
-                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                                class="font-heading text-3xl font-semibold text-yellow-dark mb-1"
                             >
                                 2002
                             </p>
@@ -203,7 +218,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder.astro";
     <section class="py-16 px-4 md:px-8">
         <div class="max-w-3xl mx-auto text-center">
             <div class="bg-yellow/30 rounded-3xl p-8 md:p-12">
-                <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-4">
+                <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-4">
                     Interesse an unserem Kinderhaus?
                 </h2>
                 <p class="text-text-muted mb-6">

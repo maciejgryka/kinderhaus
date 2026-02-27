@@ -33,11 +33,26 @@ const siteBase = Astro.site?.origin ?? "";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link rel="alternate" hreflang="de" href={siteBase + dePath} />
     <link rel="alternate" hreflang="en" href={siteBase + enPath} />
+    <meta property="og:title" content={`${title} | ${siteSuffix}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={locale === "de" ? "de_DE" : "en_US"} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={`${title} | ${siteSuffix}`} />
+    <meta name="twitter:description" content={description} />
     <title>{title} | {siteSuffix}</title>
   </head>
   <body class="min-h-screen flex flex-col">

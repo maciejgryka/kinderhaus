@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import FeatureCard from "../../components/FeatureCard.astro";
 import Blob from "../../components/Blob.astro";
+import { nextCafeDate } from "../../data/config";
 ---
 
 <Layout title="Home" locale="en">
@@ -17,7 +18,7 @@ import Blob from "../../components/Blob.astro";
             <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-12 items-center">
                 <div class="relative z-10 xl:col-span-2">
                     <h1
-                        class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
+                        class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
                     >
                         Montessori<br />Kinderhaus<br /><span
                             class="font-light text-text-muted">Potsdam West</span
@@ -28,12 +29,20 @@ import Blob from "../../components/Blob.astro";
                         <li>🤝 Community & co-creation</li>
                         <li>🎨 High-quality Montessori materials</li>
                     </ul>
+                    <a
+                        href="/en/registration"
+                        class="inline-block mt-8 bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+                    >
+                        Get to know us
+                    </a>
                 </div>
 
                 <div class="relative xl:col-span-3">
                     <img
                         src="/images/photos/IMG_0161.webp"
-                        alt="Child at the Kinderhaus"
+                        alt="Children working with Montessori materials at the Kinderhaus"
+                        width="1600"
+                        height="1200"
                         class="relative z-10 w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto rounded-2xl object-cover object-center"
                         style="aspect-ratio: 4/3;"
                     />
@@ -48,21 +57,24 @@ import Blob from "../../components/Blob.astro";
             <div class="grid md:grid-cols-3 gap-6">
                 <FeatureCard
                     title="Registration"
-                    description="All information about registration and the waiting list. Next get-to-know-us coffee: 04.03.2026"
+                    description={`All information about registration and the waiting list. Next get-to-know-us coffee: ${nextCafeDate}`}
                     linkText="Registration info"
                     linkHref="/en/registration"
+                    icon="📋"
                 />
                 <FeatureCard
                     title="Observation Visit"
                     description="Get to know our Kinderhaus in everyday life. Observation visits take place on Tuesdays and Thursdays."
                     linkText="Observation visits"
                     linkHref="/en/registration#hospitation"
+                    icon="👀"
                 />
                 <FeatureCard
                     title="Pedagogy"
                     description="Discover Montessori pedagogy and our approach to child-centred education."
                     linkText="More about our pedagogy"
                     linkHref="/en/about#paedagogik"
+                    icon="📖"
                 />
             </div>
         </div>
@@ -80,6 +92,9 @@ import Blob from "../../components/Blob.astro";
                     <img
                         src="/images/photos/IMG_0153.webp"
                         alt="Montessori materials"
+                        width="1600"
+                        height="1200"
+                        loading="lazy"
                         class="relative z-10 w-full rounded-2xl object-cover object-center"
                         style="aspect-ratio: 4/3;"
                     />
@@ -87,7 +102,7 @@ import Blob from "../../components/Blob.astro";
 
                 <div class="order-1 md:order-2">
                     <h2
-                        class="font-serif text-3xl md:text-4xl font-semibold mb-6"
+                        class="font-heading text-3xl md:text-4xl font-semibold mb-6"
                     >
                         Our Pedagogy<br />& Values
                     </h2>
@@ -140,7 +155,7 @@ import Blob from "../../components/Blob.astro";
                 >
                     <div>
                         <h2
-                            class="font-serif text-3xl md:text-4xl font-semibold mb-4"
+                            class="font-heading text-3xl md:text-4xl font-semibold mb-4"
                         >
                             Ages 1 to 6<br />welcome here
                         </h2>
@@ -160,7 +175,7 @@ import Blob from "../../components/Blob.astro";
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-white rounded-2xl p-6 shadow-sm">
                             <p
-                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                                class="font-heading text-3xl font-semibold text-yellow-dark mb-1"
                             >
                                 66
                             </p>
@@ -168,7 +183,7 @@ import Blob from "../../components/Blob.astro";
                         </div>
                         <div class="bg-white rounded-2xl p-6 shadow-sm">
                             <p
-                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                                class="font-heading text-3xl font-semibold text-yellow-dark mb-1"
                             >
                                 3
                             </p>
@@ -176,7 +191,7 @@ import Blob from "../../components/Blob.astro";
                         </div>
                         <div class="bg-white rounded-2xl p-6 shadow-sm">
                             <p
-                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                                class="font-heading text-3xl font-semibold text-yellow-dark mb-1"
                             >
                                 9
                             </p>
@@ -184,7 +199,7 @@ import Blob from "../../components/Blob.astro";
                         </div>
                         <div class="bg-white rounded-2xl p-6 shadow-sm">
                             <p
-                                class="font-serif text-3xl font-semibold text-yellow-dark mb-1"
+                                class="font-heading text-3xl font-semibold text-yellow-dark mb-1"
                             >
                                 2002
                             </p>
@@ -200,7 +215,7 @@ import Blob from "../../components/Blob.astro";
     <section class="py-16 px-4 md:px-8">
         <div class="max-w-3xl mx-auto text-center">
             <div class="bg-yellow/30 rounded-3xl p-8 md:p-12">
-                <h2 class="font-serif text-2xl md:text-3xl font-semibold mb-4">
+                <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-4">
                     Interested in our Kinderhaus?
                 </h2>
                 <p class="text-text-muted mb-6">

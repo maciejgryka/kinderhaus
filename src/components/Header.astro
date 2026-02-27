@@ -100,4 +100,12 @@ const homeHref = locale === "en" ? "/en/" : "/";
         button.setAttribute("aria-expanded", (!isExpanded).toString());
         menu?.classList.toggle("hidden");
     });
+
+    // Close mobile menu when a nav link is clicked
+    menu?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            menu.classList.add("hidden");
+            button?.setAttribute("aria-expanded", "false");
+        });
+    });
 </script>
