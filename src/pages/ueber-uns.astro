@@ -4,173 +4,227 @@ import Blob from "../components/Blob.astro";
 import ImagePlaceholder from "../components/ImagePlaceholder.astro";
 ---
 
-<Layout title="Über uns" description="Erfahre mehr über das Montessori-Kinderhaus Potsdam West, unser Team und unsere Pädagogik.">
-  <!-- Hero Section -->
-  <section class="relative py-16 md:py-24 px-4 md:px-8">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="font-heading text-4xl md:text-5xl font-semibold mb-6">
-        Über uns
-      </h1>
-      <p class="text-text-muted text-lg leading-relaxed max-w-2xl">
-        Seit Oktober 2002 begleiten wir Kinder im Potsdamer Westen auf ihrem Weg –
-        nach den Prinzipien Maria Montessoris und mit viel Engagement unserer Elterninitiative.
-      </p>
-    </div>
-  </section>
-
-  <!-- Geschichte Section -->
-  <section class="py-16 px-4 md:px-8">
-    <div class="max-w-4xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-4">
-            Unsere Geschichte
-          </h2>
-          <p class="text-text-muted leading-relaxed mb-4">
-            Das Montessori-Kinderhaus öffnete im Oktober 2002 seine Türen im Potsdamer Westen,
-            in der Nähe des Parks Sanssouci. Seither wird es vom Verein „Montessori-Kinderhaus
-            Potsdam e.V." als Elterninitiative getragen.
-          </p>
-          <p class="text-text-muted leading-relaxed">
-            Was als kleine Initiative begann, ist heute ein lebendiger Ort für bis zu 66 Kinder
-            vom ersten Geburtstag bis zum Schuleintritt. Unser Erfolg basiert auf dem
-            achtsamen Miteinander von Pädagog*innen, Kindern und engagierten Eltern.
-          </p>
+<Layout
+    title="Über uns"
+    description="Erfahre mehr über das Montessori-Kinderhaus Potsdam, unser Team und unsere Pädagogik."
+>
+    <!-- Hero Section -->
+    <section class="relative py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-heading text-4xl md:text-5xl font-semibold mb-6">
+                Über uns
+            </h1>
+            <p class="text-text-muted text-lg leading-relaxed max-w-2xl">
+                Seit Oktober 2002 begleiten wir Kinder im Potsdamer Westen auf
+                ihrem Weg – nach den Prinzipien Maria Montessoris und mit viel
+                Engagement unserer Elterninitiative.
+            </p>
         </div>
-        <div class="relative">
-          <Blob class="absolute -bottom-4 -right-4 w-full h-full opacity-40" variant="cream" />
-          <img
-            src="/images/photos/IMG_0144.webp"
-            alt="Kinderhaus Außenansicht"
-            class="relative z-10 w-full rounded-2xl object-cover object-center"
-            style="aspect-ratio: 4/3;"
-          />
+    </section>
+
+    <!-- Geschichte Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2
+                        class="font-heading text-2xl md:text-3xl font-semibold mb-4"
+                    >
+                        Unsere Geschichte
+                    </h2>
+                    <p class="text-text-muted leading-relaxed mb-4">
+                        Das Montessori-Kinderhaus öffnete im Oktober 2002 seine
+                        Türen im Potsdamer Westen, in der Nähe des Parks
+                        Sanssouci. Seither wird es vom Verein
+                        „Montessori-Kinderhaus Potsdam e.V." als
+                        Elterninitiative getragen.
+                    </p>
+                    <p class="text-text-muted leading-relaxed">
+                        Was als kleine Initiative begann, ist heute ein
+                        lebendiger Ort für bis zu 66 Kinder vom ersten
+                        Geburtstag bis zum Schuleintritt. Unser Erfolg basiert
+                        auf dem achtsamen Miteinander von Pädagog*innen, Kindern
+                        und engagierten Eltern.
+                    </p>
+                </div>
+                <div class="relative">
+                    <Blob
+                        class="absolute -bottom-4 -right-4 w-full h-full opacity-40"
+                        variant="cream"
+                    />
+                    <img
+                        src="/images/photos/IMG_0144.webp"
+                        alt="Kinderhaus Außenansicht"
+                        class="relative z-10 w-full rounded-2xl object-cover object-center"
+                        style="aspect-ratio: 4/3;"
+                    />
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Pädagogik Section -->
-  <section id="paedagogik" class="py-16 px-4 md:px-8 bg-cream-dark">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-8">
-        Unsere Pädagogik
-      </h2>
+    <!-- Pädagogik Section -->
+    <section id="paedagogik" class="py-16 px-4 md:px-8 bg-cream-dark">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-8">
+                Unsere Pädagogik
+            </h2>
 
-      <div class="grid md:grid-cols-2 gap-8 mb-8">
-        <div class="bg-white rounded-2xl p-6 shadow-sm">
-          <h3 class="font-heading text-xl font-semibold mb-3">Das Kind im Mittelpunkt</h3>
-          <p class="text-text-muted leading-relaxed">
-            Wir sehen jedes Kind in seiner Gesamtheit. Unsere Pädagog*innen verstehen sich
-            als Begleiter*innen und Beobachter*innen, nicht als Anleiter*innen.
-          </p>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-heading text-xl font-semibold mb-3">
+                        Das Kind im Mittelpunkt
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Wir sehen jedes Kind in seiner Gesamtheit. Unsere
+                        Pädagog*innen verstehen sich als Begleiter*innen und
+                        Beobachter*innen, nicht als Anleiter*innen.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-heading text-xl font-semibold mb-3">
+                        Freie Wahl der Aktivitäten
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Kinder folgen ihren sensiblen Phasen und Interessen in
+                        ihrem eigenen Rhythmus. Die vorbereitete Umgebung
+                        ermöglicht selbstständiges Handeln.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-heading text-xl font-semibold mb-3">
+                        Grenzen erfahren
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Kinder erleben Grenzen durch die Ordnung des Raumes, das
+                        Material selbst und das Zusammenleben mit anderen – ganz
+                        natürlich.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-heading text-xl font-semibold mb-3">
+                        Respekt & Toleranz
+                    </h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Wir fördern gegenseitigen Respekt und friedliches
+                        Miteinander. Soziales Lernen geschieht in der Gruppe,
+                        ergänzend zur Familie.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-heading text-xl font-semibold mb-3">
+                        Vielfalt & Inklusion
+                    </h3>
+                    <p class="text-text-muted leading-relaxed mb-3">
+                        Wir begrüßen und leben Vielfalt als Bereicherung. Unser
+                        Kinderhaus ist barrierefrei und unser Team verfügt über
+                        Fachkräfte für inklusive Betreuung.
+                    </p>
+                    <a
+                        href="/vielfalt"
+                        class="text-yellow-dark hover:text-text transition-colors font-medium text-sm"
+                    >
+                        Mehr zu Vielfalt & Inklusion →
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="bg-white rounded-2xl p-6 shadow-sm">
-          <h3 class="font-heading text-xl font-semibold mb-3">Freie Wahl der Aktivitäten</h3>
-          <p class="text-text-muted leading-relaxed">
-            Kinder folgen ihren sensiblen Phasen und Interessen in ihrem eigenen Rhythmus.
-            Die vorbereitete Umgebung ermöglicht selbstständiges Handeln.
-          </p>
+    <!-- Team Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-8">
+                Unser Team
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div>
+                    <p class="text-text-muted leading-relaxed mb-6">
+                        Zu unserem Team gehören neben den pädagogischen
+                        Fachkräften, die eine Montessori-Zusatzausbildung haben,
+                        außerdem unser Hausmeister, die Geschäftsführung sowie
+                        unsere Küchenkräfte, die täglich dazu beitragen, dass
+                        sich die Kinder bei uns rundum wohlfühlen.
+                    </p>
+
+                    <h3 class="font-heading text-xl font-semibold mb-4">
+                        Unsere Gruppen
+                    </h3>
+                    <ul class="space-y-3 text-text-muted">
+                        <li class="flex items-start">
+                            <span
+                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
+                            ></span>
+                            <span
+                                ><strong>Kleinkindgruppe:</strong> Kinder unter 3
+                                Jahren</span
+                            >
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
+                            ></span>
+                            <span
+                                ><strong>Altersgemischte Gruppe 1:</strong> 2,5 Jahre
+                                bis Schuleintritt</span
+                            >
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
+                            ></span>
+                            <span
+                                ><strong>Altersgemischte Gruppe 2:</strong> 2,5 Jahre
+                                bis Schuleintritt</span
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-yellow/20 rounded-2xl p-6">
+                    <h3 class="font-heading text-xl font-semibold mb-4">
+                        Öffnungszeiten
+                    </h3>
+                    <ul class="space-y-2 text-text-muted">
+                        <li class="flex justify-between">
+                            <span>Montag – Donnerstag</span>
+                            <span class="font-medium">7:30 – 16:30 Uhr</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Freitag</span>
+                            <span class="font-medium">7:30 – 15:00 Uhr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="bg-white rounded-2xl p-6 shadow-sm">
-          <h3 class="font-heading text-xl font-semibold mb-3">Grenzen erfahren</h3>
-          <p class="text-text-muted leading-relaxed">
-            Kinder erleben Grenzen durch die Ordnung des Raumes, das Material selbst
-            und das Zusammenleben mit anderen – ganz natürlich.
-          </p>
+    <!-- CTA Section -->
+    <section class="py-16 px-4 md:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="bg-yellow/30 rounded-3xl p-8 md:p-12">
+                <h2
+                    class="font-heading text-2xl md:text-3xl font-semibold mb-4"
+                >
+                    Lerne uns kennen
+                </h2>
+                <p class="text-text-muted mb-6">
+                    Besuche uns bei einer Hospitation oder beim nächsten
+                    Kennenlern-Café.
+                </p>
+                <a
+                    href="/anmeldung"
+                    class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
+                >
+                    Zur Anmeldung
+                </a>
+            </div>
         </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm">
-          <h3 class="font-heading text-xl font-semibold mb-3">Respekt & Toleranz</h3>
-          <p class="text-text-muted leading-relaxed">
-            Wir fördern gegenseitigen Respekt und friedliches Miteinander.
-            Soziales Lernen geschieht in der Gruppe, ergänzend zur Familie.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-sm">
-          <h3 class="font-heading text-xl font-semibold mb-3">Vielfalt & Inklusion</h3>
-          <p class="text-text-muted leading-relaxed mb-3">
-            Wir begrüßen und leben Vielfalt als Bereicherung. Unser Kinderhaus ist barrierefrei
-            und unser Team verfügt über Fachkräfte für inklusive Betreuung.
-          </p>
-          <a href="/vielfalt" class="text-yellow-dark hover:text-text transition-colors font-medium text-sm">
-            Mehr zu Vielfalt & Inklusion →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team Section -->
-  <section class="py-16 px-4 md:px-8">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-8">
-        Unser Team
-      </h2>
-
-      <div class="grid md:grid-cols-2 gap-12 items-start">
-        <div>
-          <p class="text-text-muted leading-relaxed mb-6">
-            Zu unserem Team gehören neben den pädagogischen Fachkräften, die eine
-            Montessori-Zusatzausbildung haben, außerdem unser Hausmeister, die Geschäftsführung
-            sowie unsere Küchenkräfte, die täglich dazu beitragen, dass sich die Kinder bei
-            uns rundum wohlfühlen.
-          </p>
-
-          <h3 class="font-heading text-xl font-semibold mb-4">Unsere Gruppen</h3>
-          <ul class="space-y-3 text-text-muted">
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong>Kleinkindgruppe:</strong> Kinder unter 3 Jahren</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong>Altersgemischte Gruppe 1:</strong> 2,5 Jahre bis Schuleintritt</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong>Altersgemischte Gruppe 2:</strong> 2,5 Jahre bis Schuleintritt</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-yellow/20 rounded-2xl p-6">
-          <h3 class="font-heading text-xl font-semibold mb-4">Öffnungszeiten</h3>
-          <ul class="space-y-2 text-text-muted">
-            <li class="flex justify-between">
-              <span>Montag – Donnerstag</span>
-              <span class="font-medium">7:30 – 16:30 Uhr</span>
-            </li>
-            <li class="flex justify-between">
-              <span>Freitag</span>
-              <span class="font-medium">7:30 – 15:00 Uhr</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-16 px-4 md:px-8">
-    <div class="max-w-3xl mx-auto text-center">
-      <div class="bg-yellow/30 rounded-3xl p-8 md:p-12">
-        <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-4">
-          Lerne uns kennen
-        </h2>
-        <p class="text-text-muted mb-6">
-          Besuche uns bei einer Hospitation oder beim nächsten Kennenlern-Café.
-        </p>
-        <a
-          href="/anmeldung"
-          class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-6 py-3 rounded-full transition-colors"
-        >
-          Zur Anmeldung
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
 </Layout>

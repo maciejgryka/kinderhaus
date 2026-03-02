@@ -3,7 +3,7 @@ import { t } from "../i18n/utils";
 import type { Locale } from "../i18n/utils";
 
 interface Props {
-  locale?: Locale;
+    locale?: Locale;
 }
 
 const locale: Locale = Astro.props.locale ?? "de";
@@ -13,50 +13,72 @@ const privacyHref = locale === "en" ? "/en/privacy" : "/datenschutz";
 ---
 
 <footer class="bg-cream-dark py-12 px-4 md:px-8 mt-16">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-      <div>
-        <h3 class="font-heading font-semibold text-lg mb-4">{t(locale, "footer.contact")}</h3>
-        <address class="not-italic text-text-muted text-sm leading-relaxed">
-          Montessori-Kinderhaus Potsdam West<br />
-          Knobelsdorffstr. 7<br />
-          14471 Potsdam<br /><br />
-          <a href="tel:+493316204430" class="hover:text-yellow-dark transition-colors">
-            0331 – 620 44 30
-          </a><br />
-          <a href="mailto:info@mkiha.de" class="hover:text-yellow-dark transition-colors">
-            info@mkiha.de
-          </a>
-        </address>
-      </div>
+    <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h3 class="font-heading font-semibold text-lg mb-4">
+                    {t(locale, "footer.contact")}
+                </h3>
+                <address
+                    class="not-italic text-text-muted text-sm leading-relaxed"
+                >
+                    Montessori-Kinderhaus e.V.<br />
+                    Knobelsdorffstr. 7<br />
+                    14471 Potsdam<br /><br />
+                    <a
+                        href="tel:+493316204430"
+                        class="hover:text-yellow-dark transition-colors"
+                    >
+                        0331 – 620 44 30
+                    </a><br />
+                    <a
+                        href="mailto:info@mkiha.de"
+                        class="hover:text-yellow-dark transition-colors"
+                    >
+                        info@mkiha.de
+                    </a>
+                </address>
+            </div>
 
-      <div>
-        <h3 class="font-heading font-semibold text-lg mb-4">{t(locale, "footer.hours")}</h3>
-        <p class="text-text-muted text-sm leading-relaxed">
-          {t(locale, "footer.hoursMoTh")}<br />
-          {t(locale, "footer.hoursFr")}
-        </p>
-      </div>
+            <div>
+                <h3 class="font-heading font-semibold text-lg mb-4">
+                    {t(locale, "footer.hours")}
+                </h3>
+                <p class="text-text-muted text-sm leading-relaxed">
+                    {t(locale, "footer.hoursMoTh")}<br />
+                    {t(locale, "footer.hoursFr")}
+                </p>
+            </div>
 
-      <div>
-        <h3 class="font-heading font-semibold text-lg mb-4">{t(locale, "footer.legal")}</h3>
-        <ul class="text-text-muted text-sm space-y-2">
-          <li>
-            <a href={imprintHref} class="hover:text-yellow-dark transition-colors">
-              {t(locale, "footer.imprint")}
-            </a>
-          </li>
-          <li>
-            <a href={privacyHref} class="hover:text-yellow-dark transition-colors">
-              {t(locale, "footer.privacy")}
-            </a>
-          </li>
-        </ul>
-      </div>
+            <div>
+                <h3 class="font-heading font-semibold text-lg mb-4">
+                    {t(locale, "footer.legal")}
+                </h3>
+                <ul class="text-text-muted text-sm space-y-2">
+                    <li>
+                        <a
+                            href={imprintHref}
+                            class="hover:text-yellow-dark transition-colors"
+                        >
+                            {t(locale, "footer.imprint")}
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href={privacyHref}
+                            class="hover:text-yellow-dark transition-colors"
+                        >
+                            {t(locale, "footer.privacy")}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="border-t border-yellow/30 pt-8 text-center text-text-muted text-sm"
+        >
+            <p>&copy; {currentYear} Montessori-Kinderhaus Potsdam e.V.</p>
+        </div>
     </div>
-
-    <div class="border-t border-yellow/30 pt-8 text-center text-text-muted text-sm">
-      <p>&copy; {currentYear} Montessori-Kinderhaus Potsdam e.V.</p>
-    </div>
-  </div>
 </footer>

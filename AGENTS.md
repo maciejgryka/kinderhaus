@@ -4,7 +4,7 @@ Guidelines for AI agents working on this project.
 
 ## Project Overview
 
-This is a static website for **Montessori-Kinderhaus Potsdam West**, a parent-run Montessori kindergarten in Potsdam, Germany. The site is being rebuilt from scratch with a modern design.
+This is a static website for **Montessori-Kinderhaus Potsdam e.V.**, a parent-run Montessori kindergarten in Potsdam, Germany. The site is being rebuilt from scratch with a modern design.
 
 - **Tech stack:** Astro, Tailwind CSS v4, TypeScript
 - **Package manager:** Bun (managed via mise)

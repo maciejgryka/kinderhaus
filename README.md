@@ -1,4 +1,4 @@
-# Montessori-Kinderhaus Potsdam West
+# Montessori-Kinderhaus e.V.
 
 Website for the Montessori-Kinderhaus Potsdam West, a parent-run Montessori kindergarten in Potsdam, Germany.
 

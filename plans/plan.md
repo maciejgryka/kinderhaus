@@ -1,4 +1,4 @@
-# Montessori-Kinderhaus Potsdam West - Website Redesign Plan
+# Montessori-Kinderhaus Potsdam e.V. - Website Redesign Plan
 
 ## Overview
 
