@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @source "../../src/**/*.astro";
 
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/inter.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/open-sans.woff2") format("woff2");
+}
+
 @theme {
   --color-cream: #FDF8F3;
   --color-cream-dark: #F5EDE3;
