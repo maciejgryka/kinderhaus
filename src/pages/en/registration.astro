@@ -2,10 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import hospitationen from "../../data/hospitationen.json";
 
-const cutoff = new Date();
-cutoff.setDate(cutoff.getDate() - 7);
-cutoff.setHours(0, 0, 0, 0);
-
 const dayNames: Record<number, string> = {
     0: "Sunday", 1: "Monday", 2: "Tuesday", 3: "Wednesday",
     4: "Thursday", 5: "Friday", 6: "Saturday",
@@ -16,12 +12,10 @@ const statusLabels: Record<string, string> = {
     belegt: "booked",
 };
 
-const rows = hospitationen
-    .map((h) => {
-        const date = new Date(h.date + "T00:00:00");
-        return { date, day: dayNames[date.getDay()], datum: date.toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }), platz1: h.platz1, platz2: h.platz2 };
-    })
-    .filter((r) => r.date >= cutoff);
+const rows = hospitationen.map((h) => {
+    const date = new Date(h.date + "T00:00:00");
+    return { isoDate: h.date, day: dayNames[date.getDay()], datum: date.toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }), platz1: h.platz1, platz2: h.platz2 };
+});
 ---
 
 <Layout
@@ -264,7 +258,7 @@ const rows = hospitationen
                     </thead>
                     <tbody>
                         {rows.map((row, i) => (
-                            <tr class={i % 2 === 0 ? "bg-cream-dark" : ""}>
+                            <tr data-date={row.isoDate} class={i % 2 === 0 ? "bg-cream-dark" : ""}>
                                 <td class="px-3 py-2">{row.day}</td>
                                 <td class="px-3 py-2">{row.datum}</td>
                                 <td class:list={["px-3 py-2 text-center font-medium", row.platz1 === "frei" ? "text-green-700" : "text-orange-500"]}>
@@ -277,6 +271,22 @@ const rows = hospitationen
                         ))}
                     </tbody>
                 </table>
+                <script>
+                    const rows = document.querySelectorAll("tr[data-date]");
+                    const cutoff = new Date();
+                    cutoff.setDate(cutoff.getDate() - 7);
+                    cutoff.setHours(0, 0, 0, 0);
+                    let stripe = 0;
+                    rows.forEach((row) => {
+                        const date = new Date(row.dataset.date + "T00:00:00");
+                        if (date < cutoff) {
+                            row.style.display = "none";
+                        } else {
+                            row.className = stripe % 2 === 0 ? "bg-cream-dark" : "";
+                            stripe++;
+                        }
+                    });
+                </script>
             </div>
         </div>
     </section>

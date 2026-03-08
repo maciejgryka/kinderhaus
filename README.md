@@ -27,11 +27,25 @@ bun install    # Install dependencies
 bun run dev    # Start dev server at localhost:4321
 ```
 
+### Development with Admin Page
+
+The site includes an admin page (`/admin`) for editing the hospitation page content. This requires running Wrangler locally:
+
+```sh
+# Terminal 1: Run the Astro dev server
+bun run dev
+
+# Terminal 2: Build and run with Wrangler (for /admin to work)
+bun run build && bun run preview
+```
+
+Then access the admin page at: http://localhost:8788/admin
+
 ### Build
 
 ```sh
 bun run build    # Build to ./dist/
-bun run preview  # Preview the build locally
+bun run preview  # Preview the build locally with Wrangler
 ```
 
 ## Deployment
