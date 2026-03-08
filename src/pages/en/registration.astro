@@ -1,5 +1,27 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import hospitationen from "../../data/hospitationen.json";
+
+const cutoff = new Date();
+cutoff.setDate(cutoff.getDate() - 7);
+cutoff.setHours(0, 0, 0, 0);
+
+const dayNames: Record<number, string> = {
+    0: "Sunday", 1: "Monday", 2: "Tuesday", 3: "Wednesday",
+    4: "Thursday", 5: "Friday", 6: "Saturday",
+};
+
+const statusLabels: Record<string, string> = {
+    frei: "available",
+    belegt: "booked",
+};
+
+const rows = hospitationen
+    .map((h) => {
+        const date = new Date(h.date + "T00:00:00");
+        return { date, day: dayNames[date.getDay()], datum: date.toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }), platz1: h.platz1, platz2: h.platz2 };
+    })
+    .filter((r) => r.date >= cutoff);
 ---
 
 <Layout
@@ -194,66 +216,67 @@ import Layout from "../../layouts/Layout.astro";
                 Observation Visits
             </h2>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <p class="text-text-muted leading-relaxed mb-6">
-                        During an observation visit you can experience everyday
-                        life at our Kinderhaus. You observe the independent work
-                        of children in a mixed-age group of 3 to 6 year olds.
-                    </p>
+            <p class="text-text-muted leading-relaxed mb-6">
+                Interested in our work? We are happy to offer parents and
+                educators the opportunity to get to know the
+                Montessori-Kinderhaus. You are welcome to spend some time in
+                our house and observe the children.
+            </p>
 
-                    <h3 class="font-heading text-lg font-semibold mb-3">
-                        How It Works
-                    </h3>
-                    <ul class="space-y-2 text-text-muted mb-6">
-                        <li class="flex items-start">
-                            <span
-                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
-                            ></span>
-                            <span>Observation: 8:45 – 10:30 AM</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span
-                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
-                            ></span>
-                            <span
-                                >Followed by a short conversation with an
-                                educator</span
-                            >
-                        </li>
-                    </ul>
+            <ul class="space-y-3 text-text-muted mb-6">
+                <li class="flex items-start">
+                    <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Our observation days are <strong>Tuesdays and Thursdays</strong> in September, October and November, as well as from January to the end of May.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>You can experience free work time in a group of children aged three to six from <strong>8:45 am to 10:30 am</strong>. Afterwards, we offer you time and space for a short conversation with one of our educators.</span>
+                </li>
+            </ul>
 
-                    <p
-                        class="text-text-muted text-sm p-4 bg-cream-dark rounded-xl"
-                    >
-                        <strong>Please note:</strong> An observation visit cannot
-                        take place in the presence of your own child.
-                    </p>
-                </div>
+            <p class="text-text-muted leading-relaxed mb-6">
+                To book an appointment, choose an available date from the list
+                below and send us an email at
+                <a
+                    href="mailto:hospitationen@mkiha.de"
+                    class="text-yellow-dark hover:text-text transition-colors font-medium"
+                >hospitationen@mkiha.de</a>
+                with your chosen date.
+            </p>
 
-                <div class="bg-yellow/20 rounded-2xl p-6">
-                    <h3 class="font-heading text-lg font-semibold mb-4">
-                        Dates & Booking
-                    </h3>
-                    <p class="text-text-muted leading-relaxed mb-4">
-                        Observation visits take place on <strong
-                            >Tuesdays and Thursdays</strong
-                        >, during the following periods:
-                    </p>
-                    <ul class="space-y-2 text-text-muted mb-6">
-                        <li>&#8226; September – November</li>
-                        <li>&#8226; January – May</li>
-                    </ul>
-                    <p class="text-text-muted leading-relaxed mb-4">
-                        Please send us an email with your preferred date:
-                    </p>
-                    <a
-                        href="mailto:hospitationen@mkiha.de"
-                        class="inline-block bg-yellow hover:bg-yellow-dark text-text font-medium px-5 py-2 rounded-full transition-colors text-sm"
-                    >
-                        hospitationen@mkiha.de
-                    </a>
-                </div>
+            <p class="text-text-muted text-sm p-4 bg-cream-dark rounded-xl mb-4">
+                <strong>Please note:</strong> Observation visits cannot take place in the presence of your own child.
+            </p>
+
+            <p class="text-text-muted text-sm p-4 bg-cream-dark rounded-xl mb-8">
+                <strong>Please note:</strong> Observation visits do not normally take place in June, July, August and December.
+            </p>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse text-sm md:text-base">
+                    <thead>
+                        <tr class="bg-yellow/30">
+                            <th class="px-3 py-3 text-left font-heading font-semibold">Day</th>
+                            <th class="px-3 py-3 text-left font-heading font-semibold">Date</th>
+                            <th class="px-3 py-3 text-center font-heading font-semibold">Slot 1</th>
+                            <th class="px-3 py-3 text-center font-heading font-semibold">Slot 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {rows.map((row, i) => (
+                            <tr class={i % 2 === 0 ? "bg-cream-dark" : ""}>
+                                <td class="px-3 py-2">{row.day}</td>
+                                <td class="px-3 py-2">{row.datum}</td>
+                                <td class:list={["px-3 py-2 text-center font-medium", row.platz1 === "frei" ? "text-green-700" : "text-orange-500"]}>
+                                    {statusLabels[row.platz1]}
+                                </td>
+                                <td class:list={["px-3 py-2 text-center font-medium", row.platz2 === "frei" ? "text-green-700" : "text-orange-500"]}>
+                                    {statusLabels[row.platz2]}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
