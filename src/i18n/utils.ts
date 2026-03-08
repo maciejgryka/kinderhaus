@@ -25,6 +25,7 @@ const pageMap: Record<string, string> = {
   'impressum': 'imprint',
   'datenschutz': 'privacy',
   'galerie': 'gallery',
+  'hospitationsliste': 'observation-visits',
   '404': '404',
 };
 
