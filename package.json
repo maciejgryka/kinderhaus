@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
-    "astro": "^5.18.1",
+    "astro": "^6.2.2",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.4.2",
+    "@astrojs/react": "^5.0.4",
     "@cloudflare/workers-types": "^4.20260506.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
