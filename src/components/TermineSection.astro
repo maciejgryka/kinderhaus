@@ -1,0 +1,47 @@
+---
+import {
+  termine,
+  formatTerminDateDe,
+  formatTerminDateEn,
+  type Termin,
+} from "../data/config";
+
+interface Props {
+  locale?: "de" | "en";
+}
+
+const { locale = "de" } = Astro.props;
+
+const labels = {
+  de: { heading: "Nächste Termine" },
+  en: { heading: "Upcoming dates" },
+};
+
+const formatDate = locale === "en" ? formatTerminDateEn : formatTerminDateDe;
+const getTitle = (t: Termin) => (locale === "en" ? t.titleEn : t.titleDe);
+const getTime = (t: Termin) => (locale === "en" ? t.timeEn : t.timeDe);
+
+const now = new Date();
+const upcoming = termine.filter((t) => (t.endDate ?? t.date) >= now);
+---
+
+<section class="py-16 px-4 md:px-8">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-8 text-center">
+      {labels[locale].heading}
+    </h2>
+    <ul class="bg-white rounded-3xl p-6 md:p-8 shadow-sm divide-y divide-cream-dark">
+      {upcoming.map((t) => (
+        <li class="flex items-start gap-4 py-3 first:pt-0 last:pb-0">
+          <span class="w-2 h-2 bg-yellow rounded-full mt-2.5 flex-shrink-0"></span>
+          <div class="flex-1 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+            <p class="font-medium">{getTitle(t)}</p>
+            <p class="text-text-muted text-sm">
+              {formatDate(t)}{getTime(t) ? `, ${getTime(t)}` : ""}
+            </p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import hospitationen from "../../data/hospitationen.json";
+import { nextCafeDateLongEn, nextCafeTimeEn } from "../../data/config";
 
 const dayNames: Record<number, string> = {
     0: "Sunday", 1: "Monday", 2: "Tuesday", 3: "Wednesday",
@@ -68,7 +69,7 @@ const rows = hospitationen.map((h) => {
                             Get to Know Us
                         </h3>
                         <p class="text-text-muted leading-relaxed">
-                            Attend our get-to-know-us coffee or an observation
+                            Attend our Welcome Café or an observation
                             visit to experience the Kinderhaus and our everyday
                             routines. This is recommended but not mandatory.
                         </p>
@@ -154,18 +155,18 @@ const rows = hospitationen.map((h) => {
         </div>
     </section>
 
-    <!-- Get-to-Know Coffee Section -->
+    <!-- Welcome Café Section -->
     <section class="py-16 px-4 md:px-8 bg-cream-dark">
         <div class="max-w-4xl mx-auto">
             <h2 class="font-heading text-2xl md:text-3xl font-semibold mb-8">
-                Get-to-Know-Us Coffee
+                Welcome Café
             </h2>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
                     <p class="text-text-muted leading-relaxed mb-6">
                         Twice a year we invite interested parents to our
-                        get-to-know-us coffee. Here you can make first contacts
+                        Welcome Café. Here you can make first contacts
                         with Kinderhaus parents, parent representatives and
                         educators.
                     </p>
@@ -184,17 +185,8 @@ const rows = hospitationen.map((h) => {
                                 class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
                             ></span>
                             <div>
-                                <p class="font-medium">4 March 2026</p>
-                                <p class="text-text-muted text-sm">3:00 PM</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span
-                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
-                            ></span>
-                            <div>
-                                <p class="font-medium">2 October 2026</p>
-                                <p class="text-text-muted text-sm">3:00 PM</p>
+                                <p class="font-medium">{nextCafeDateLongEn}</p>
+                                <p class="text-text-muted text-sm">{nextCafeTimeEn}</p>
                             </div>
                         </li>
                     </ul>

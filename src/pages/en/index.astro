@@ -2,7 +2,12 @@
 import Layout from "../../layouts/Layout.astro";
 import FeatureCard from "../../components/FeatureCard.astro";
 import Blob from "../../components/Blob.astro";
-import { nextCafeDate } from "../../data/config";
+import TermineSection from "../../components/TermineSection.astro";
+import {
+    nextCafeDate,
+    fleaMarketDate,
+    fleaMarketTimeEn,
+} from "../../data/config";
 ---
 
 <Layout title="Home" locale="en">
@@ -58,10 +63,11 @@ import { nextCafeDate } from "../../data/config";
             <div class="grid md:grid-cols-3 gap-6">
                 <FeatureCard
                     title="Registration"
-                    description={`All information about registration and the waiting list. Next get-to-know-us coffee: ${nextCafeDate}`}
+                    description={`All information about registration and the waiting list. Next Welcome Café: ${nextCafeDate}`}
                     linkText="Registration info"
                     linkHref="/en/registration"
                     icon="📋"
+                    badge="Spots available"
                 />
                 <FeatureCard
                     title="Observation Visit"
@@ -71,11 +77,12 @@ import { nextCafeDate } from "../../data/config";
                     icon="👀"
                 />
                 <FeatureCard
-                    title="Pedagogy"
-                    description="Discover Montessori pedagogy and our approach to child-centred education."
-                    linkText="More about our pedagogy"
-                    linkHref="/en/about#paedagogik"
+                    title="Daily Life"
+                    description="The daily rhythm offers security – and plenty of room for development."
+                    linkText="More about daily life"
+                    linkHref="/en/daily-life"
                     icon="📖"
+                    badge={`Flea market ${fleaMarketDate}, ${fleaMarketTimeEn}`}
                 />
             </div>
         </div>
@@ -212,6 +219,8 @@ import { nextCafeDate } from "../../data/config";
         </div>
     </section>
 
+    <TermineSection locale="en" />
+
     <!-- CTA Section -->
     <section class="py-16 px-4 md:px-8">
         <div class="max-w-3xl mx-auto text-center">
@@ -220,7 +229,7 @@ import { nextCafeDate } from "../../data/config";
                     Interested in our Kinderhaus?
                 </h2>
                 <p class="text-text-muted mb-6">
-                    Visit us at our next get-to-know-us coffee or arrange an
+                    Visit us at our next Welcome Café or arrange an
                     observation visit.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">

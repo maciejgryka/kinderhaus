@@ -3,7 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import FeatureCard from "../components/FeatureCard.astro";
 import Blob from "../components/Blob.astro";
 import ImagePlaceholder from "../components/ImagePlaceholder.astro";
-import { nextCafeDate } from "../data/config";
+import TermineSection from "../components/TermineSection.astro";
+import {
+    nextCafeDate,
+    fleaMarketDate,
+    fleaMarketTimeDe,
+} from "../data/config";
 ---
 
 <Layout title="Startseite">
@@ -63,6 +68,7 @@ import { nextCafeDate } from "../data/config";
                     linkText="Zur Anmeldung"
                     linkHref="/anmeldung"
                     icon="📋"
+                    badge="Freie Plätze verfügbar"
                 />
                 <FeatureCard
                     title="Hospitation"
@@ -77,6 +83,7 @@ import { nextCafeDate } from "../data/config";
                     linkText="Mehr zum Alltag"
                     linkHref="/alltag"
                     icon="📖"
+                    badge={`Flohmarkt ${fleaMarketDate}, ${fleaMarketTimeDe}`}
                 />
             </div>
         </div>
@@ -214,6 +221,8 @@ import { nextCafeDate } from "../data/config";
             </div>
         </div>
     </section>
+
+    <TermineSection locale="de" />
 
     <!-- CTA Section -->
     <section class="py-16 px-4 md:px-8">
