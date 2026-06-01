@@ -21,6 +21,9 @@ const formatDate = locale === "en" ? formatTerminDateEn : formatTerminDateDe;
 const getTitle = (t: Termin) => (locale === "en" ? t.titleEn : t.titleDe);
 const getTime = (t: Termin) => (locale === "en" ? t.timeEn : t.timeDe);
 
+const toIsoDate = (d: Date) =>
+  `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
 const now = new Date();
 const upcoming = termine.filter((t) => (t.endDate ?? t.date) >= now);
 ---
@@ -32,7 +35,10 @@ const upcoming = termine.filter((t) => (t.endDate ?? t.date) >= now);
     </h2>
     <ul class="bg-white rounded-3xl p-6 md:p-8 shadow-sm divide-y divide-cream-dark">
       {upcoming.map((t) => (
-        <li class="flex items-start gap-4 py-3 first:pt-0 last:pb-0">
+        <li
+          class="flex items-start gap-4 py-3 first:pt-0 last:pb-0"
+          data-termin-end={toIsoDate(t.endDate ?? t.date)}
+        >
           <span class="w-2 h-2 bg-yellow rounded-full mt-2.5 flex-shrink-0"></span>
           <div class="flex-1 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <p class="font-medium">{getTitle(t)}</p>
@@ -45,3 +51,11 @@ const upcoming = termine.filter((t) => (t.endDate ?? t.date) >= now);
     </ul>
   </div>
 </section>
+
+<script>
+  const now = new Date();
+  const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  document.querySelectorAll<HTMLElement>("[data-termin-end]").forEach((el) => {
+    if ((el.dataset.terminEnd ?? "") < today) el.hidden = true;
+  });
+</script>
