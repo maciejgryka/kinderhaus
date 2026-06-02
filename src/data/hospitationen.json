@@ -301,8 +301,8 @@
   },
   {
     "date": "2026-06-04",
-    "platz1": "frei",
-    "platz2": "frei"
+    "platz1": "belegt",
+    "platz2": "belegt"
   },
   {
     "date": "2026-06-09",
@@ -316,22 +316,22 @@
   },
   {
     "date": "2026-06-16",
-    "platz1": "frei",
-    "platz2": "frei"
+    "platz1": "belegt",
+    "platz2": "belegt"
   },
   {
     "date": "2026-06-18",
-    "platz1": "frei",
-    "platz2": "frei"
+    "platz1": "belegt",
+    "platz2": "belegt"
   },
   {
     "date": "2026-06-23",
-    "platz1": "frei",
-    "platz2": "frei"
+    "platz1": "belegt",
+    "platz2": "belegt"
   },
   {
     "date": "2026-06-25",
-    "platz1": "frei",
-    "platz2": "frei"
+    "platz1": "belegt",
+    "platz2": "belegt"
   }
 ]
