@@ -102,16 +102,9 @@ export function formatTerminDateEn(t: Termin): string {
 }
 
 const cafe = termine.find((t) => t.kind === "cafe")!;
-const flea = termine.find((t) => t.kind === "flea-market")!;
 
 export const nextCafeDate = cafe.date.toLocaleDateString("de-DE", SHORT_DE);
 export const nextCafeDateLongDe = cafe.date.toLocaleDateString("de-DE", LONG_DE);
 export const nextCafeDateLongEn = cafe.date.toLocaleDateString("en-GB", LONG_EN);
 export const nextCafeTimeDe = cafe.timeDe!;
 export const nextCafeTimeEn = cafe.timeEn!;
-
-export const fleaMarketDate = flea.date.toLocaleDateString("de-DE", SHORT_DE);
-export const fleaMarketDateLongDe = flea.date.toLocaleDateString("de-DE", LONG_DE);
-export const fleaMarketDateLongEn = flea.date.toLocaleDateString("en-GB", LONG_EN);
-export const fleaMarketTimeDe = flea.timeDe!;
-export const fleaMarketTimeEn = flea.timeEn!;

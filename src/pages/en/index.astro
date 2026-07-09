@@ -3,11 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import FeatureCard from "../../components/FeatureCard.astro";
 import Blob from "../../components/Blob.astro";
 import TermineSection from "../../components/TermineSection.astro";
-import {
-    nextCafeDate,
-    fleaMarketDate,
-    fleaMarketTimeEn,
-} from "../../data/config";
+import { nextCafeDate } from "../../data/config";
 ---
 
 <Layout title="Home" locale="en">
@@ -82,7 +78,6 @@ import {
                     linkText="More about daily life"
                     linkHref="/en/daily-life"
                     icon="📖"
-                    badge={`Flea market ${fleaMarketDate}, ${fleaMarketTimeEn}`}
                 />
             </div>
         </div>
