@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import hospitationen from "../../data/hospitationen.json";
-import { nextCafeDateLongEn, nextCafeTimeEn } from "../../data/config";
+import CafeDates from "../../components/CafeDates.astro";
 
 const dayNames: Record<number, string> = {
     0: "Sunday", 1: "Monday", 2: "Tuesday", 3: "Wednesday",
@@ -47,8 +47,12 @@ const rows = hospitationen.map((h) => {
                 <p class="text-text-muted leading-relaxed">
                     Before registering your child, we invite you to get to know
                     our Kinderhaus and our pedagogical approach. This way you
-                    can make sure our approach fits your expectations. We are
-                    looking for parents who are happy and able to actively
+                    assess whether our approach meets your expectations and
+                    suits your child. As a parent-run kindergarten, the Kinderhaus
+                    also has some particular organisational arrangements.
+                </p>
+                <p class="text-text-muted leading-relaxed mt-4">
+                    We are looking for parents who are happy and able to actively
                     participate in our parent initiative.
                 </p>
             </div>
@@ -71,7 +75,7 @@ const rows = hospitationen.map((h) => {
                         <p class="text-text-muted leading-relaxed">
                             Attend our Welcome Café or an observation
                             visit to experience the Kinderhaus and our everyday
-                            routines. This is recommended but not mandatory.
+                            routines.
                         </p>
                     </div>
                 </div>
@@ -127,7 +131,9 @@ const rows = hospitationen.map((h) => {
                             >
                                 registration form (PDF, German)
                             </a>
-                            to us by post.
+                            to us by post or email. You can find our contact
+                            details on our
+                            <a href="/en/contact" class="text-yellow-dark hover:text-text transition-colors font-medium">contact page</a>.
                         </p>
                     </div>
                 </div>
@@ -144,10 +150,8 @@ const rows = hospitationen.map((h) => {
                         </h3>
                         <p class="text-text-muted leading-relaxed">
                             After receiving your registration, we will invite
-                            you and your child to a getting-to-know-you meeting.
-                            This meeting is a <strong
-                                >prerequisite for admission</strong
-                            >.
+                            your family to a getting-to-know-you meeting.
+                            We do not maintain a numbered waiting list.
                         </p>
                     </div>
                 </div>
@@ -165,31 +169,29 @@ const rows = hospitationen.map((h) => {
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
                     <p class="text-text-muted leading-relaxed mb-6">
-                        Twice a year we invite interested parents to our
-                        Welcome Café. Here you can make first contacts
-                        with Kinderhaus parents, parent representatives and
-                        educators.
+                        A Welcome Café for interested parents takes place twice
+                        a year. Educators, parent representatives and Kinderhaus
+                        parents are there to answer questions and chat.
                     </p>
+                    <h3 class="font-heading text-lg font-semibold mb-4">
+                        What can you expect at the Welcome Café?
+                    </h3>
+                    <ul class="space-y-3 text-text-muted mb-6">
+                        <li><strong>3:00–3:30 pm:</strong> Arrive for coffee and cake</li>
+                        <li><strong>3:30 pm:</strong> Questions and answers in the Yellow Group's movement room</li>
+                        <li><strong>Afterwards:</strong> Tour of the premises</li>
+                        <li><strong>Until 5:00 pm:</strong> Time in the garden with coffee, cake and conversation with parents and educators</li>
+                    </ul>
                     <p class="text-text-muted leading-relaxed">
                         No registration is required – just come along!
                     </p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="bg-white rounded-2xl p-6 shadow-sm self-start">
                     <h3 class="font-heading text-lg font-semibold mb-4">
                         Upcoming Dates
                     </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span
-                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
-                            ></span>
-                            <div>
-                                <p class="font-medium">{nextCafeDateLongEn}</p>
-                                <p class="text-text-muted text-sm">{nextCafeTimeEn}</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <CafeDates locale="en" />
                 </div>
             </div>
         </div>
@@ -203,22 +205,17 @@ const rows = hospitationen.map((h) => {
             </h2>
 
             <p class="text-text-muted leading-relaxed mb-6">
-                Interested in our work? We are happy to offer parents and
-                educators the opportunity to get to know the
-                Montessori-Kinderhaus. You are welcome to spend some time in
-                our house and observe the children.
+                An observation visit offers a good insight into how our educational
+                approach is put into practice at the Montessori-Kinderhaus. We are
+                happy to offer interested parents and educators this opportunity.
             </p>
 
-            <ul class="space-y-3 text-text-muted mb-6">
-                <li class="flex items-start">
-                    <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>Our observation days are <strong>Tuesdays and Thursdays</strong> in September, October and November, as well as from January to the end of May.</span>
-                </li>
-                <li class="flex items-start">
-                    <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>You can experience free work time in a group of children aged three to six from <strong>8:45 am to 10:30 am</strong>. Afterwards, we offer you time and space for a short conversation with one of our educators.</span>
-                </li>
-            </ul>
+            <p class="text-text-muted leading-relaxed mb-6">
+                Observation visits take place from <strong>8:45 am to 10:00 am</strong>
+                in a group of children aged three until school entry. Afterwards,
+                we offer you time and space for a short conversation with one of
+                our educators.
+            </p>
 
             <p class="text-text-muted leading-relaxed mb-6">
                 To book an appointment, choose an available date from the list
@@ -300,10 +297,6 @@ const rows = hospitationen.map((h) => {
                         communication among parents.
                     </p>
 
-                    <p class="text-text-muted leading-relaxed">
-                        There are also opportunities to serve as a parent
-                        representative or on the board.
-                    </p>
                 </div>
 
                 <div>
@@ -325,8 +318,9 @@ const rows = hospitationen.map((h) => {
                                 class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
                             ></span>
                             <span class="text-text-muted"
-                                ><strong>Communications</strong> – Website, newsletter,
-                                public relations</span
+                                ><strong>Communications</strong> – Website,
+                                public relations, layout of the parents' bulletin,
+                                design of flyers and posters</span
                             >
                         </li>
                         <li class="flex items-start">
@@ -334,7 +328,7 @@ const rows = hospitationen.map((h) => {
                                 class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
                             ></span>
                             <span class="text-text-muted"
-                                ><strong>Kitchen</strong> – Organising meals</span
+                                ><strong>Kitchen</strong> – Covering for kitchen staff</span
                             >
                         </li>
                         <li class="flex items-start">
@@ -343,7 +337,7 @@ const rows = hospitationen.map((h) => {
                             ></span>
                             <span class="text-text-muted"
                                 ><strong>Events</strong> – Planning celebrations and
-                                events</span
+                                events together with the educational team</span
                             >
                         </li>
                         <li class="flex items-start">
@@ -358,6 +352,10 @@ const rows = hospitationen.map((h) => {
                     </ul>
                 </div>
             </div>
+            <p class="text-text-muted leading-relaxed mt-8">
+                There are also opportunities to serve as a parent representative
+                or on the board.
+            </p>
         </div>
     </section>
 

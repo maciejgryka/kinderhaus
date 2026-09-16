@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import hospitationen from "../data/hospitationen.json";
-import { nextCafeDateLongDe, nextCafeTimeDe } from "../data/config";
+import CafeDates from "../components/CafeDates.astro";
 
 const dayNames: Record<number, string> = {
     0: "Sonntag", 1: "Montag", 2: "Dienstag", 3: "Mittwoch",
@@ -40,12 +40,16 @@ const rows = hospitationen.map((h) => {
                     Wichtig zu wissen
                 </h2>
                 <p class="text-text-muted leading-relaxed">
-                    Bevor du dein Kind anmeldest, laden wir dich ein, unser
-                    Kinderhaus und die pädagogische Konzeption kennenzulernen. So
-                    kannst du sicherstellen, dass unser Ansatz zu deinen
-                    Vorstellungen passt. Wir suchen Eltern, die Freude und Zeit
-                    mitbringen, sich aktiv in unsere Elterninitiative
-                    einzubringen.
+                    Bevor du dein Kind bei uns anmeldest, laden wir dich ein,
+                    das Kinderhaus und die zugrundeliegende pädagogische Konzeption
+                    kennenzulernen. So kannst du überprüfen, ob unsere pädagogische
+                    Ausrichtung deinen Vorstellungen entspricht und zu deinem Kind
+                    passt. Darüber hinaus bringt die Trägerschaft des Kinderhauses
+                    als Elterninitiative einige organisatorische Besonderheiten mit sich.
+                </p>
+                <p class="text-text-muted leading-relaxed mt-4">
+                    Wir suchen Eltern, die Freude und Zeit mitbringen, sich aktiv
+                    in unsere Elterninitiative einzubringen.
                 </p>
             </div>
 
@@ -67,7 +71,6 @@ const rows = hospitationen.map((h) => {
                         <p class="text-text-muted leading-relaxed">
                             Besuche unser Kennenlern-Café oder eine Hospitation,
                             um das Kinderhaus und unseren Alltag kennenzulernen.
-                            Dies ist empfohlen, aber nicht verpflichtend.
                         </p>
                     </div>
                 </div>
@@ -123,7 +126,9 @@ const rows = hospitationen.map((h) => {
                             >
                                 Anmeldeformular (PDF)
                             </a>
-                            per Post an uns.
+                            per Post oder E-Mail an uns. Die Kontaktdaten findest
+                            du auf unserer
+                            <a href="/kontakt" class="text-yellow-dark hover:text-text transition-colors font-medium">Kontaktseite</a>.
                         </p>
                     </div>
                 </div>
@@ -139,11 +144,9 @@ const rows = hospitationen.map((h) => {
                             Kennenlerngespräch
                         </h3>
                         <p class="text-text-muted leading-relaxed">
-                            Nach Eingang deiner Anmeldung laden wir dich und
-                            dein Kind zu einem Kennenlerngespräch ein. Dieses
-                            Gespräch ist <strong
-                                >Voraussetzung für die Aufnahme</strong
-                            >.
+                            Nach Eingang deiner Anmeldung laden wir dich mit
+                            deiner Familie zu einem Kennenlerngespräch ein.
+                            Eine nummerierte Warteliste wird nicht geführt.
                         </p>
                     </div>
                 </div>
@@ -161,32 +164,31 @@ const rows = hospitationen.map((h) => {
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
                     <p class="text-text-muted leading-relaxed mb-6">
-                        Zweimal im Jahr laden wir interessierte Eltern zu
-                        unserem Kennenlern-Café ein. Hier kannst du erste
-                        Kontakte zu Kinderhaus-Eltern, Elternvertreter*innen und
-                        Pädagog*innen knüpfen.
+                        Zweimal im Jahr findet ein Kennenlern-Café für
+                        interessierte Eltern statt. Für Fragen und Austausch sind
+                        Pädagog*innen, Elternvertreter*innen und Kinderhaus-Eltern
+                        vor Ort.
                     </p>
+                    <h3 class="font-heading text-lg font-semibold mb-4">
+                        Was erwartet dich beim Kennenlern-Café?
+                    </h3>
+                    <ul class="space-y-3 text-text-muted mb-6">
+                        <li><strong>15:00–15:30 Uhr:</strong> Ankommen bei Kaffee und Kuchen</li>
+                        <li><strong>15:30 Uhr:</strong> Fragerunde im Bewegungsraum der Gruppe Gelb</li>
+                        <li><strong>Im Anschluss:</strong> Besichtigung der Räumlichkeiten</li>
+                        <li><strong>Bis 17:00 Uhr:</strong> Aufenthalt im Garten bei Kaffee und Kuchen und Austausch mit Eltern und Pädagog*innen</li>
+                    </ul>
                     <p class="text-text-muted leading-relaxed">
                         Eine Anmeldung ist nicht erforderlich – komm einfach
                         vorbei!
                     </p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <div class="bg-white rounded-2xl p-6 shadow-sm self-start">
                     <h3 class="font-heading text-lg font-semibold mb-4">
                         Nächste Termine
                     </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span
-                                class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
-                            ></span>
-                            <div>
-                                <p class="font-medium">{nextCafeDateLongDe}</p>
-                                <p class="text-text-muted text-sm">{nextCafeTimeDe}</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <CafeDates />
                 </div>
             </div>
         </div>
@@ -200,23 +202,17 @@ const rows = hospitationen.map((h) => {
             </h2>
 
             <p class="text-text-muted leading-relaxed mb-6">
-                Du hast Interesse an unserer Arbeit? Wir bieten interessierten
-                Eltern und Pädagog*innen gern die Möglichkeit, das
-                Montessori-Kinderhaus kennen zu lernen. Du bist eingeladen,
-                einige Zeit in unserem Haus zu verbringen und die Kinder zu
-                beobachten.
+                Eine Hospitation bietet einen guten Einblick in die Umsetzung
+                der pädagogischen Arbeit im Montessori-Kinderhaus. Wir bieten
+                interessierten Eltern und Pädagog*innen gern diese Möglichkeit an.
             </p>
 
-            <ul class="space-y-3 text-text-muted mb-6">
-                <li class="flex items-start">
-                    <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>Unsere Hospitationstage sind der <strong>Dienstag und Donnerstag</strong> im September, Oktober und November sowie von Januar bis Ende Mai.</span>
-                </li>
-                <li class="flex items-start">
-                    <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span>Du kannst von <strong>8:45 Uhr bis 10:30 Uhr</strong> die Freiarbeit in einer Gruppe von Kindern von drei bis sechs Jahren erleben. Im Anschluss daran bieten wir dir Zeit und Raum für ein kurzes Gespräch mit einer pädagogischen Fachkraft an.</span>
-                </li>
-            </ul>
+            <p class="text-text-muted leading-relaxed mb-6">
+                Hospitationen finden von <strong>8:45 Uhr bis 10:00 Uhr</strong>
+                in einer Gruppe von Kindern von drei Jahren bis zum Schuleintritt
+                statt. Im Anschluss daran bieten wir dir Zeit und Raum für ein
+                kurzes Gespräch mit einer pädagogischen Fachkraft an.
+            </p>
 
             <p class="text-text-muted leading-relaxed mb-6">
                 Zur Terminvereinbarung such dir einen freien Termin aus der
@@ -291,17 +287,13 @@ const rows = hospitationen.map((h) => {
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
                     <p class="text-text-muted leading-relaxed mb-6">
-                        Teil des Kinderhauses zu sein bedeutet auch aktive
+                        Teil des Kinderhauses zu sein, bedeutet auch aktive
                         Mitarbeit. Jede Familie bringt pro Quartal <strong
                             >12 Arbeitsstunden</strong
                         > ein. Diese Mitarbeit hält die Kosten niedrig und fördert
                         die Kommunikation unter den Eltern.
                     </p>
 
-                    <p class="text-text-muted leading-relaxed">
-                        Darüber hinaus gibt es die Möglichkeit, als
-                        Elternvertreter*in oder im Vorstand mitzuwirken.
-                    </p>
                 </div>
 
                 <div>
@@ -323,8 +315,9 @@ const rows = hospitationen.map((h) => {
                                 class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
                             ></span>
                             <span class="text-text-muted"
-                                ><strong>AG Kommunikation</strong> – Website, Newsletter,
-                                Öffentlichkeitsarbeit</span
+                                ><strong>AG Kommunikation</strong> – Website,
+                                Öffentlichkeitsarbeit, Layout des Elternbriefes,
+                                Gestaltung von Flyern und Postern</span
                             >
                         </li>
                         <li class="flex items-start">
@@ -332,7 +325,7 @@ const rows = hospitationen.map((h) => {
                                 class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"
                             ></span>
                             <span class="text-text-muted"
-                                ><strong>AG Küche</strong> – Organisation der Mahlzeiten</span
+                                ><strong>AG Küche</strong> – Vertretung der Küchenkräfte</span
                             >
                         </li>
                         <li class="flex items-start">
@@ -341,7 +334,7 @@ const rows = hospitationen.map((h) => {
                             ></span>
                             <span class="text-text-muted"
                                 ><strong>AG Feste</strong> – Planung von Feiern und
-                                Veranstaltungen</span
+                                Veranstaltungen in Zusammenarbeit mit dem pädagogischen Team</span
                             >
                         </li>
                         <li class="flex items-start">
@@ -355,6 +348,10 @@ const rows = hospitationen.map((h) => {
                     </ul>
                 </div>
             </div>
+            <p class="text-text-muted leading-relaxed mt-8">
+                Darüber hinaus gibt es die Möglichkeit, als Elternvertreter*in
+                oder im Vorstand mitzuwirken.
+            </p>
         </div>
     </section>
 
