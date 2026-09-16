@@ -1,0 +1,60 @@
+---
+import { cafeDates } from "../data/config";
+
+interface Props {
+  locale?: "de" | "en";
+  mode?: "list" | "next";
+}
+
+const { locale = "de", mode = "list" } = Astro.props;
+const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Berlin" }).format(new Date());
+const nextDate = cafeDates.find((cafe) => cafe.isoDate >= today);
+const fallback = locale === "de"
+  ? "Neue Termine werden hier bekannt gegeben."
+  : "New dates will be announced here.";
+---
+
+{mode === "next" ? (
+  <span data-cafe-dates="next">
+    {cafeDates.map((cafe) => (
+      <span data-cafe-date={cafe.isoDate} hidden={cafe !== nextDate}>
+        {locale === "de" ? ` Nächstes Kennenlern-Café: ${cafe.shortDe}` : ` Next Welcome Café: ${cafe.dateEn}`}
+      </span>
+    ))}
+    <span data-cafe-empty hidden={!!nextDate}> {fallback}</span>
+  </span>
+) : (
+  <div data-cafe-dates="list">
+    <ul class="space-y-4" hidden={!nextDate}>
+      {cafeDates.map((cafe) => (
+        <li data-cafe-date={cafe.isoDate} hidden={cafe.isoDate < today}>
+          <div class="flex items-start">
+            <span class="w-2 h-2 bg-yellow rounded-full mt-2 mr-3 flex-shrink-0"></span>
+            <div>
+              <p class="font-medium">{locale === "de" ? cafe.dateDe : cafe.dateEn}</p>
+              <p class="text-text-muted text-sm">{locale === "de" ? cafe.timeDe : cafe.timeEn}</p>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+    <p data-cafe-empty hidden={!!nextDate} class="text-text-muted">{fallback}</p>
+  </div>
+)}
+
+<script>
+  // Refresh static pages on each visit, even when no new build has run.
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Berlin" }).format(new Date());
+  document.querySelectorAll<HTMLElement>("[data-cafe-dates]").forEach((container) => {
+    let hasUpcoming = false;
+    container.querySelectorAll<HTMLElement>("[data-cafe-date]").forEach((item) => {
+      const upcoming = (item.dataset.cafeDate ?? "") >= today;
+      item.hidden = !upcoming || (container.dataset.cafeDates === "next" && hasUpcoming);
+      if (upcoming) hasUpcoming = true;
+    });
+    const fallback = container.querySelector<HTMLElement>("[data-cafe-empty]");
+    if (fallback) fallback.hidden = hasUpcoming;
+    const list = container.querySelector("ul");
+    if (list) list.hidden = !hasUpcoming;
+  });
+</script>
