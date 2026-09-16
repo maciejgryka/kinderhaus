@@ -3,6 +3,12 @@
  * so they only need to be updated in one spot.
  */
 
+// Set active to false once the vacancy has been filled.
+export const jobVacancy = {
+  active: true,
+  url: "https://de.indeed.com/viewjob?jk=65c23c048095e936",
+};
+
 export type TerminKind =
   | "cafe"
   | "flea-market"

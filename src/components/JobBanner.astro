@@ -1,0 +1,46 @@
+---
+import { jobVacancy } from "../data/config";
+import type { Locale } from "../i18n/utils";
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = "de" } = Astro.props;
+const copy = {
+  de: {
+    title: "Verstärke unser Team!",
+    description: "Wir suchen Erzieher / Heilerzieher / Heilpädagogen (m/w/d).",
+    link: "Stellenanzeige auf Indeed ansehen",
+  },
+  en: {
+    title: "Join our team!",
+    description: "We’re looking for an early years educator or special needs educator (all genders).",
+    link: "View job on Indeed (in German)",
+  },
+}[locale];
+---
+
+{
+  jobVacancy.active && (
+    <aside aria-labelledby="job-banner-title" class="px-4 md:px-8 pt-4">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6 bg-yellow/30 border border-yellow/30 rounded-xl px-4 py-3">
+        <div class="text-sm leading-relaxed">
+          <h2 id="job-banner-title" class="inline font-heading text-sm font-semibold mr-2">
+            {copy.title}
+          </h2>
+          <p class="inline text-text-muted">{copy.description}</p>
+        </div>
+        <a
+          href={jobVacancy.url}
+          class="inline-flex items-center gap-1.5 self-start md:self-center md:shrink-0 text-sm text-text-muted underline decoration-yellow-dark/40 underline-offset-4 hover:text-yellow-dark transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-text"
+        >
+          <span>{copy.link}</span>
+          <svg aria-hidden="true" class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17 17 7M7 7h10v10" />
+          </svg>
+        </a>
+      </div>
+    </aside>
+  )
+}
