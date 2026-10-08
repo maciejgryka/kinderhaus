@@ -5,7 +5,7 @@ import Blob from "../components/Blob.astro";
 import ImagePlaceholder from "../components/ImagePlaceholder.astro";
 import TermineSection from "../components/TermineSection.astro";
 import JobBanner from "../components/JobBanner.astro";
-import { nextCafeDate } from "../data/config";
+import CafeDates from "../components/CafeDates.astro";
 ---
 
 <Layout title="Startseite">
@@ -63,15 +63,17 @@ import { nextCafeDate } from "../data/config";
             <div class="grid md:grid-cols-3 gap-6">
                 <FeatureCard
                     title="Anmeldung"
-                    description={`Alle Infos zur Anmeldung und Warteliste findest du hier. Nächstes Kennenlern-Café: ${nextCafeDate}`}
+                    description="Alle Infos zur Anmeldung und Aufnahme findest du hier."
                     linkText="Zur Anmeldung"
                     linkHref="/anmeldung"
                     icon="📋"
                     badge="Freie Plätze verfügbar"
-                />
+                >
+                    <CafeDates slot="description-extra" mode="next" />
+                </FeatureCard>
                 <FeatureCard
                     title="Hospitation"
-                    description="Lerne unser Kinderhaus im Alltag kennen. Hospitationen finden dienstags und donnerstags statt."
+                    description="Lerne unser Kinderhaus im Alltag kennen. Hospitationen finden nach Terminvereinbarung statt."
                     linkText="Hospitation"
                     linkHref="/anmeldung#hospitation"
                     icon="👀"

@@ -4,7 +4,7 @@ import FeatureCard from "../../components/FeatureCard.astro";
 import Blob from "../../components/Blob.astro";
 import TermineSection from "../../components/TermineSection.astro";
 import JobBanner from "../../components/JobBanner.astro";
-import { nextCafeDate } from "../../data/config";
+import CafeDates from "../../components/CafeDates.astro";
 ---
 
 <Layout title="Home" locale="en">
@@ -62,15 +62,17 @@ import { nextCafeDate } from "../../data/config";
             <div class="grid md:grid-cols-3 gap-6">
                 <FeatureCard
                     title="Registration"
-                    description={`All information about registration and the waiting list. Next Welcome Café: ${nextCafeDate}`}
+                    description="All information about registration and admission."
                     linkText="Registration info"
                     linkHref="/en/registration"
                     icon="📋"
                     badge="Spots available"
-                />
+                >
+                    <CafeDates slot="description-extra" locale="en" mode="next" />
+                </FeatureCard>
                 <FeatureCard
                     title="Observation Visit"
-                    description="Get to know our Kinderhaus in everyday life. Observation visits take place on Tuesdays and Thursdays."
+                    description="Get to know our Kinderhaus in everyday life. Observation visits take place by appointment."
                     linkText="Observation visits"
                     linkHref="/en/registration#hospitation"
                     icon="👀"
