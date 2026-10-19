@@ -59,8 +59,8 @@ export const termine: Termin[] = [
     kind: "cafe",
     titleDe: "Kennenlern-Café",
     titleEn: "Welcome Café",
-    timeDe: "15:00 Uhr",
-    timeEn: "3:00 PM",
+    timeDe: "15:00–17:00 Uhr",
+    timeEn: "3:00–5:00 pm",
   },
   {
     date: new Date(2026, 9, 9),
@@ -87,6 +87,14 @@ export const termine: Termin[] = [
     titleDe: "Schließzeit",
     titleEn: "Closed",
   },
+  {
+    date: new Date(2027, 2, 5, 15, 0),
+    kind: "cafe",
+    titleDe: "Kennenlern-Café",
+    titleEn: "Welcome Café",
+    timeDe: "15:00–17:00 Uhr",
+    timeEn: "3:00–5:00 pm",
+  },
 ];
 
 const SHORT_DE = { day: "2-digit", month: "2-digit", year: "numeric" } as const;
@@ -107,10 +115,14 @@ export function formatTerminDateEn(t: Termin): string {
   return t.date.toLocaleDateString("en-GB", LONG_EN);
 }
 
-const cafe = termine.find((t) => t.kind === "cafe")!;
-
-export const nextCafeDate = cafe.date.toLocaleDateString("de-DE", SHORT_DE);
-export const nextCafeDateLongDe = cafe.date.toLocaleDateString("de-DE", LONG_DE);
-export const nextCafeDateLongEn = cafe.date.toLocaleDateString("en-GB", LONG_EN);
-export const nextCafeTimeDe = cafe.timeDe!;
-export const nextCafeTimeEn = cafe.timeEn!;
+export const cafeDates = termine
+  .filter((t) => t.kind === "cafe")
+  .sort((a, b) => a.date.getTime() - b.date.getTime())
+  .map((t) => ({
+    isoDate: `${t.date.getFullYear()}-${String(t.date.getMonth() + 1).padStart(2, "0")}-${String(t.date.getDate()).padStart(2, "0")}`,
+    shortDe: t.date.toLocaleDateString("de-DE", SHORT_DE),
+    dateDe: formatTerminDateDe(t),
+    dateEn: formatTerminDateEn(t),
+    timeDe: t.timeDe,
+    timeEn: t.timeEn,
+  }));
