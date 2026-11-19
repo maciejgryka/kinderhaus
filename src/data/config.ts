@@ -55,14 +55,6 @@ export const termine: Termin[] = [
     titleEn: "Summer festival",
   },
   {
-    date: new Date(2026, 9, 2, 15, 0),
-    kind: "cafe",
-    titleDe: "Kennenlern-Café",
-    titleEn: "Welcome Café",
-    timeDe: "15:00 Uhr",
-    timeEn: "3:00 PM",
-  },
-  {
     date: new Date(2026, 9, 9),
     kind: "team-day",
     titleDe: "Teamtag",
@@ -86,6 +78,14 @@ export const termine: Termin[] = [
     kind: "closure",
     titleDe: "Schließzeit",
     titleEn: "Closed",
+  },
+  {
+    date: new Date(2027, 2, 5, 15, 0),
+    kind: "cafe",
+    titleDe: "Kennenlern-Café",
+    titleEn: "Welcome Café",
+    timeDe: "15:00 Uhr",
+    timeEn: "3:00 PM",
   },
 ];
 
