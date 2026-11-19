@@ -6,7 +6,7 @@
 // Set active to false once the vacancy has been filled.
 export const jobVacancy = {
   active: true,
-  url: "https://de.indeed.com/viewjob?jk=65c23c048095e936",
+  url: "https://de.indeed.com/viewjob?jk=3c7dffa4222997ba",
 };
 
 export type TerminKind =
