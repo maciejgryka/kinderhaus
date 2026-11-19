@@ -136,12 +136,12 @@
   },
   {
     "date": "2026-11-24",
-    "platz1": "frei",
+    "platz1": "belegt",
     "platz2": "frei"
   },
   {
     "date": "2026-11-26",
-    "platz1": "frei",
+    "platz1": "belegt",
     "platz2": "frei"
   }
 ]
