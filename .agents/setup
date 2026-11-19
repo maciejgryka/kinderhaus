@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# Prepares a fresh Amp orb: pinned Bun via mise, then dependencies from bun.lock.
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+
+step() { echo "==> $1"; SECONDS=0; }
+done_step() { echo "    done in ${SECONDS}s"; }
+
+mise_bin="$HOME/.local/bin/mise"
+shims="$HOME/.local/share/mise/shims"
+
+step "Installing mise"
+if [ ! -x "$mise_bin" ]; then
+  curl -fsSL https://mise.run | MISE_QUIET=1 sh
+fi
+done_step
+
+# Put mise shims (pinned Bun) ahead of the orb's preinstalled Bun in login shells,
+# which Amp and supervised services use.
+profile_marker="# kinderhaus: mise shims"
+if ! grep -Fqx "$profile_marker" "$HOME/.bash_profile" 2>/dev/null; then
+  cat >> "$HOME/.bash_profile" <<PROFILE
+
+$profile_marker
+export PATH="$HOME/.local/bin:$shims:\$PATH"
+PROFILE
+fi
+export PATH="$HOME/.local/bin:$shims:$PATH"
+
+step "Installing toolchain from mise.toml"
+"$mise_bin" trust --quiet mise.toml
+"$mise_bin" install --yes
+"$mise_bin" reshim
+echo "    bun $(bun --version) at $(command -v bun)"
+done_step
+
+step "Installing dependencies"
+bun install --frozen-lockfile
+done_step

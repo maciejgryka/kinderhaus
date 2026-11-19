@@ -25,3 +25,6 @@ agents/counselors/
 
 # jetbrains setting folder
 .idea/
+
+# Amp orb portal state
+.amp/portals/
