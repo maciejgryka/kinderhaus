@@ -1,6 +1,6 @@
 /// <reference types="@cloudflare/workers-types" />
 
-interface Env {
+export interface Env {
   GITHUB_TOKEN: string;
   GITHUB_REPO: string;
   ADMIN_PASSWORD: string;
@@ -167,8 +167,7 @@ async function updateFileOnGitHub(env: Env, content: string, sha: string) {
   return res.json();
 }
 
-export const onRequestGet: PagesFunction<Env> = async (context) => {
-  const { request, env } = context;
+export async function handleGet(request: Request, env: Env): Promise<Response> {
   if (!checkAuth(request, env)) {
     return new Response("Unauthorized", { status: 401 });
   }
@@ -191,10 +190,9 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       headers: { "Content-Type": "application/json" },
     });
   }
-};
+}
 
-export const onRequestPut: PagesFunction<Env> = async (context) => {
-  const { request, env } = context;
+export async function handlePut(request: Request, env: Env): Promise<Response> {
   if (!checkAuth(request, env)) {
     return new Response("Unauthorized", { status: 401 });
   }
@@ -218,4 +216,4 @@ export const onRequestPut: PagesFunction<Env> = async (context) => {
   return new Response(JSON.stringify({ ok: true }), {
     headers: { "Content-Type": "application/json" },
   });
-};
+}

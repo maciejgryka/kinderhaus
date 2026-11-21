@@ -1,6 +1,6 @@
 /// <reference types="@cloudflare/workers-types" />
 
-export const onRequestGet: PagesFunction = async () => {
+export function handleAdmin(): Response {
   const html = `<!DOCTYPE html>
 <html lang="de">
 <head>
@@ -189,4 +189,4 @@ export const onRequestGet: PagesFunction = async () => {
       "Cache-Control": "no-store",
     },
   });
-};
+}

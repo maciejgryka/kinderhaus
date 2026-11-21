@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kinderhaus",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/admin", "/admin/", "/api/*"]
+  },
+  // Secrets set in the Cloudflare dashboard or with `wrangler secret put`:
+  // ADMIN_PASSWORD, GITHUB_TOKEN
+  "vars": {
+    "GITHUB_REPO": "maciejgryka/kinderhaus"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

@@ -2,7 +2,7 @@
 
 Website for the Montessori-Kinderhaus Potsdam West, a parent-run Montessori kindergarten in Potsdam, Germany.
 
-**Live site:** (Cloudflare Pages - URL TBD)
+**Live site:** (Cloudflare Workers - URL TBD)
 
 ## Tech Stack
 
@@ -39,7 +39,9 @@ bun run dev
 bun run build && bun run preview
 ```
 
-Then access the admin page at: http://localhost:8788/admin
+Then access the admin page at: http://localhost:8787/admin
+
+Local secrets go in a gitignored `.dev.vars` file (`ADMIN_PASSWORD=...`, `GITHUB_TOKEN=...`).
 
 ### Build
 
@@ -50,15 +52,14 @@ bun run preview  # Preview the build locally with Wrangler
 
 ## Deployment
 
-The site is deployed to **Cloudflare Pages** via Workers Builds.
+The site is deployed as a **Cloudflare Worker with static assets** via Workers Builds.
 
-### Cloudflare Pages (current)
+Automatic deployment on every push to `main`; other branches get a preview URL.
 
-Automatic deployment on every push to `main`.
-
-- **Config:** `wrangler.jsonc` defines the static assets directory
+- **Config:** `wrangler.jsonc` serves `dist/` as static assets and routes `/admin` and `/api/*` to the Worker in `worker/`
 - **Build command:** `bun run build`
-- **Output directory:** `dist`
+- **Deploy command:** `npx wrangler deploy` (non-production branches: `npx wrangler versions upload`)
+- **Secrets:** `ADMIN_PASSWORD`, `GITHUB_TOKEN`
 
 ## Project Structure
 

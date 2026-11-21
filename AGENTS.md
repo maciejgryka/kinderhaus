@@ -8,7 +8,7 @@ This is a static website for **Montessori-Kinderhaus Potsdam e.V.**, a parent-ru
 
 - **Tech stack:** Astro, Tailwind CSS v4, TypeScript
 - **Package manager:** Bun (managed via mise)
-- **Hosting:** Cloudflare Pages
+- **Hosting:** Cloudflare Workers (static assets)
 - **Language:** German (all user-facing content is in German)
 
 ## Commands
@@ -116,10 +116,9 @@ const { title, description } = Astro.props;
 
 ## Deployment
 
-- **Cloudflare Pages** via Workers Builds (current)
+- **Cloudflare Workers** with static assets, via Workers Builds
 - Automatic deployment on push to `main`
-- Config: `wrangler.jsonc` defines static assets directory (`./dist`)
-- Alternative: GitHub Actions workflow available at `.github/workflows/deploy.yml`
+- Config: `wrangler.jsonc` serves `./dist` as static assets and routes `/admin` and `/api/*` to the Worker in `worker/`
 
 ## Notes
 
