@@ -1,130 +1,5 @@
 [
   {
-    "date": "2026-06-18",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-06-23",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-06-25",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-09-01",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-09-03",
-    "platz1": "belegt",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-09-08",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-09-10",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-09-15",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-09-17",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-09-22",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-09-24",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-09-29",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-10-01",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-10-06",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-10-08",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-10-13",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-10-15",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-10-20",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-10-22",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-10-27",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-10-29",
-    "platz1": "belegt",
-    "platz2": "belegt"
-  },
-  {
-    "date": "2026-11-03",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-11-05",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-11-10",
-    "platz1": "belegt",
-    "platz2": "frei"
-  },
-  {
-    "date": "2026-11-12",
-    "platz1": "frei",
-    "platz2": "frei"
-  },
-  {
     "date": "2026-11-17",
     "platz1": "frei",
     "platz2": "frei"
@@ -142,6 +17,211 @@
   {
     "date": "2026-11-26",
     "platz1": "belegt",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-01-05",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-01-07",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-01-12",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-01-14",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-01-19",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-01-21",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-01-26",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-01-28",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-02-02",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-02-04",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-02-09",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-02-11",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-02-16",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-02-18",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-02-23",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-02-25",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-03-02",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-03-04",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-03-09",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-03-11",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-03-16",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-03-18",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-03-23",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-03-25",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-03-30",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-04-01",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-04-06",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-04-08",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-04-13",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-04-15",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-04-20",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-04-22",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-04-27",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-04-29",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-05-04",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-05-11",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-05-13",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-05-18",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-05-20",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-05-25",
+    "platz1": "frei",
+    "platz2": "frei"
+  },
+  {
+    "date": "2027-05-27",
+    "platz1": "frei",
     "platz2": "frei"
   }
 ]
